@@ -1,0 +1,1413 @@
+M CNN | C 5 | B 128 | E 30 | R 10
+
+R 1
+
+Dataset preparation...
+Model preparation...
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv2d-1           [-1, 12, 13, 13]           1,776
+       BatchNorm2d-2           [-1, 12, 13, 13]              24
+              ReLU-3           [-1, 12, 13, 13]               0
+            Conv2d-4             [-1, 32, 9, 9]           9,632
+       BatchNorm2d-5             [-1, 32, 9, 9]              64
+              ReLU-6             [-1, 32, 9, 9]               0
+            Conv2d-7             [-1, 64, 7, 7]          18,496
+       BatchNorm2d-8             [-1, 64, 7, 7]             128
+              ReLU-9             [-1, 64, 7, 7]               0
+           Conv2d-10            [-1, 128, 2, 2]         204,928
+      BatchNorm2d-11            [-1, 128, 2, 2]             256
+             ReLU-12            [-1, 128, 2, 2]               0
+          Flatten-13                  [-1, 512]               0
+           Linear-14                  [-1, 256]         131,328
+             ReLU-15                  [-1, 256]               0
+           Linear-16                    [-1, 5]           1,285
+             ReLU-17                    [-1, 5]               0
+          Dropout-18                    [-1, 5]               0
+          Encoder-19                    [-1, 5]               0
+           Linear-20                  [-1, 256]           1,536
+             ReLU-21                  [-1, 256]               0
+          Dropout-22                  [-1, 256]               0
+           Linear-23                  [-1, 512]         131,584
+             ReLU-24                  [-1, 512]               0
+           Linear-25                  [-1, 256]         131,328
+             ReLU-26                  [-1, 256]               0
+           Linear-27                    [-1, 4]           1,028
+      OutputLayer-28                    [-1, 4]               0
+================================================================
+Total params: 633,393
+Trainable params: 633,393
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 0.01
+Forward/backward pass size (MB): 0.21
+Params size (MB): 2.42
+Estimated Total Size (MB): 2.64
+----------------------------------------------------------------
+Start training...
+Epoch 1/30
+TRAIN | loss: 0.9223 - global_acc: 0.5737 - class_acc: [0.9132 0.4583 0.5889 0.3423] 
+VALID | loss: 0.4764 - global_acc: 0.7479 - class_acc: [1.0000 0.9959 0.0000 1.0000] - BEST!
+Epoch 2/30
+TRAIN | loss: 0.6917 - global_acc: 0.6396 - class_acc: [0.9320 0.6327 0.4223 0.5785] 
+VALID | loss: 0.4103 - global_acc: 0.7498 - class_acc: [1.0000 0.9993 0.0000 0.9986] - BEST!
+Epoch 3/30
+TRAIN | loss: 0.6168 - global_acc: 0.6727 - class_acc: [0.9357 0.7516 0.2369 0.7557] 
+VALID | loss: 0.4256 - global_acc: 0.7357 - class_acc: [1.0000 0.9993 0.9127 0.0352]
+Epoch 4/30
+TRAIN | loss: 0.6156 - global_acc: 0.6659 - class_acc: [0.9363 0.7367 0.3600 0.6354] 
+VALID | loss: 0.4101 - global_acc: 0.7530 - class_acc: [1.0000 1.0000 0.0000 1.0000] - BEST!
+Epoch 5/30
+TRAIN | loss: 0.6035 - global_acc: 0.6701 - class_acc: [0.9406 0.7511 0.4486 0.5532] 
+VALID | loss: 0.4235 - global_acc: 0.7333 - class_acc: [1.0000 1.0000 1.0000 0.0000]
+Epoch 6/30
+TRAIN | loss: 0.5963 - global_acc: 0.6737 - class_acc: [0.9581 0.7466 0.3393 0.6537] 
+VALID | loss: 0.4234 - global_acc: 0.7423 - class_acc: [1.0000 0.9952 0.0000 1.0000]
+Epoch 7/30
+TRAIN | loss: 0.5743 - global_acc: 0.6898 - class_acc: [0.9586 0.7858 0.6862 0.3203] 
+VALID | loss: 0.3925 - global_acc: 0.7421 - class_acc: [1.0000 0.9986 0.0000 0.9986]
+Epoch 8/30
+TRAIN | loss: 0.5263 - global_acc: 0.7070 - class_acc: [0.9660 0.8654 0.4267 0.5739] 
+VALID | loss: 0.3810 - global_acc: 0.7518 - class_acc: [1.0000 1.0000 0.0000 1.0000]
+Epoch 9/30
+TRAIN | loss: 0.5132 - global_acc: 0.7123 - class_acc: [0.9659 0.8780 0.4869 0.5117] 
+VALID | loss: 0.3836 - global_acc: 0.7557 - class_acc: [1.0000 1.0000 0.0000 1.0000] - BEST!
+Epoch 10/30
+TRAIN | loss: 0.5083 - global_acc: 0.7176 - class_acc: [0.9684 0.8771 0.4512 0.5698] 
+VALID | loss: 0.3751 - global_acc: 0.7486 - class_acc: [1.0000 1.0000 0.0000 1.0000]
+Epoch 11/30
+TRAIN | loss: 0.5124 - global_acc: 0.7079 - class_acc: [0.9653 0.8765 0.6846 0.2993] 
+VALID | loss: 0.3967 - global_acc: 0.7418 - class_acc: [1.0000 1.0000 0.9446 0.0251]
+Epoch 12/30
+TRAIN | loss: 0.5286 - global_acc: 0.7031 - class_acc: [0.9591 0.8712 0.4563 0.5340] 
+VALID | loss: 0.4079 - global_acc: 0.7467 - class_acc: [1.0000 0.9867 0.0000 0.9994]
+Epoch 13/30
+TRAIN | loss: 0.5052 - global_acc: 0.7132 - class_acc: [0.9690 0.8756 0.5621 0.4363] 
+VALID | loss: 0.3865 - global_acc: 0.7426 - class_acc: [1.0000 1.0000 0.0000 1.0000]
+Epoch 14/30
+TRAIN | loss: 0.5149 - global_acc: 0.7167 - class_acc: [0.9677 0.8688 0.2600 0.7523] 
+VALID | loss: 0.3852 - global_acc: 0.7511 - class_acc: [1.0000 0.9986 0.0000 1.0000]
+Epoch 15/30
+TRAIN | loss: 0.5143 - global_acc: 0.7101 - class_acc: [0.9687 0.8720 0.5967 0.4066] 
+VALID | loss: 0.3837 - global_acc: 0.7525 - class_acc: [1.0000 1.0000 1.0000 0.0000]
+Epoch 16/30
+TRAIN | loss: 0.5128 - global_acc: 0.7098 - class_acc: [0.9686 0.8756 0.5118 0.4876] 
+VALID | loss: 0.3865 - global_acc: 0.7476 - class_acc: [1.0000 1.0000 0.9980 0.0000]
+Epoch 17/30
+TRAIN | loss: 0.5172 - global_acc: 0.7069 - class_acc: [0.9681 0.8667 0.5653 0.4292] 
+VALID | loss: 0.3889 - global_acc: 0.7380 - class_acc: [1.0000 0.9972 1.0000 0.0000]
+Epoch 18/30
+TRAIN | loss: 0.5131 - global_acc: 0.7100 - class_acc: [0.9693 0.8679 0.2210 0.7762] 
+VALID | loss: 0.3986 - global_acc: 0.7403 - class_acc: [1.0000 0.9993 0.0000 1.0000]
+Epoch 19/30
+TRAIN | loss: 0.5191 - global_acc: 0.7112 - class_acc: [0.9645 0.8676 0.5146 0.4972] 
+VALID | loss: 0.3904 - global_acc: 0.7431 - class_acc: [1.0000 1.0000 1.0000 0.0000]
+Epoch 20/30
+TRAIN | loss: 0.5072 - global_acc: 0.7124 - class_acc: [0.9692 0.8769 0.6922 0.3107] 
+VALID | loss: 0.3804 - global_acc: 0.7532 - class_acc: [1.0000 1.0000 0.0000 1.0000]
+Epoch 21/30
+TRAIN | loss: 0.5017 - global_acc: 0.7138 - class_acc: [0.9706 0.8804 0.4613 0.5405] 
+VALID | loss: 0.3853 - global_acc: 0.7443 - class_acc: [1.0000 1.0000 0.9993 0.0000]
+Epoch 22/30
+TRAIN | loss: 0.5066 - global_acc: 0.7125 - class_acc: [0.9653 0.8828 0.2831 0.7116] 
+VALID | loss: 0.3845 - global_acc: 0.7447 - class_acc: [1.0000 0.9993 0.9993 0.0000]
+Epoch 23/30
+TRAIN | loss: 0.4983 - global_acc: 0.7145 - class_acc: [0.9704 0.8870 0.5429 0.4558] 
+VALID | loss: 0.3850 - global_acc: 0.7484 - class_acc: [1.0000 1.0000 0.0000 1.0000]
+Epoch 24/30
+TRAIN | loss: 0.4982 - global_acc: 0.7121 - class_acc: [0.9718 0.8879 0.7768 0.2111] 
+VALID | loss: 0.3837 - global_acc: 0.7459 - class_acc: [1.0000 1.0000 0.0000 1.0000]
+Epoch 25/30
+TRAIN | loss: 0.5207 - global_acc: 0.7075 - class_acc: [0.9637 0.8735 0.4751 0.5181] 
+VALID | loss: 0.3986 - global_acc: 0.7408 - class_acc: [1.0000 0.9964 0.0000 1.0000]
+Epoch 26/30
+TRAIN | loss: 0.5102 - global_acc: 0.7147 - class_acc: [0.9707 0.8688 0.7893 0.2154] 
+VALID | loss: 0.3812 - global_acc: 0.7489 - class_acc: [1.0000 0.9973 1.0000 0.0000]
+Epoch 27/30
+TRAIN | loss: 0.5118 - global_acc: 0.7075 - class_acc: [0.9632 0.8784 0.4410 0.5465] 
+VALID | loss: 0.3836 - global_acc: 0.7494 - class_acc: [1.0000 0.9967 1.0000 0.0000]
+Epoch 28/30
+TRAIN | loss: 0.5048 - global_acc: 0.7147 - class_acc: [0.9649 0.8800 0.5839 0.4158] 
+VALID | loss: 0.3809 - global_acc: 0.7527 - class_acc: [1.0000 0.9993 1.0000 0.0000]
+Epoch 29/30
+TRAIN | loss: 0.5014 - global_acc: 0.7129 - class_acc: [0.9747 0.8754 0.6094 0.3868] 
+VALID | loss: 0.3849 - global_acc: 0.7547 - class_acc: [1.0000 0.9980 0.0000 1.0000]
+Epoch 30/30
+TRAIN | loss: 0.5033 - global_acc: 0.7172 - class_acc: [0.9686 0.8778 0.0909 0.9062] 
+VALID | loss: 0.3870 - global_acc: 0.7501 - class_acc: [1.0000 1.0000 0.0000 1.0000]
+
+
+Evaluating...
+TEST | loss: 0.5487 - global_acc: 0.6686 - class_acc: [1.0000 1.0000 0.0000 1.0000]
+
+R 2
+
+Dataset preparation...
+Model preparation...
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv2d-1           [-1, 12, 13, 13]           1,776
+       BatchNorm2d-2           [-1, 12, 13, 13]              24
+              ReLU-3           [-1, 12, 13, 13]               0
+            Conv2d-4             [-1, 32, 9, 9]           9,632
+       BatchNorm2d-5             [-1, 32, 9, 9]              64
+              ReLU-6             [-1, 32, 9, 9]               0
+            Conv2d-7             [-1, 64, 7, 7]          18,496
+       BatchNorm2d-8             [-1, 64, 7, 7]             128
+              ReLU-9             [-1, 64, 7, 7]               0
+           Conv2d-10            [-1, 128, 2, 2]         204,928
+      BatchNorm2d-11            [-1, 128, 2, 2]             256
+             ReLU-12            [-1, 128, 2, 2]               0
+          Flatten-13                  [-1, 512]               0
+           Linear-14                  [-1, 256]         131,328
+             ReLU-15                  [-1, 256]               0
+           Linear-16                    [-1, 5]           1,285
+             ReLU-17                    [-1, 5]               0
+          Dropout-18                    [-1, 5]               0
+          Encoder-19                    [-1, 5]               0
+           Linear-20                  [-1, 256]           1,536
+             ReLU-21                  [-1, 256]               0
+          Dropout-22                  [-1, 256]               0
+           Linear-23                  [-1, 512]         131,584
+             ReLU-24                  [-1, 512]               0
+           Linear-25                  [-1, 256]         131,328
+             ReLU-26                  [-1, 256]               0
+           Linear-27                    [-1, 4]           1,028
+      OutputLayer-28                    [-1, 4]               0
+================================================================
+Total params: 633,393
+Trainable params: 633,393
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 0.01
+Forward/backward pass size (MB): 0.21
+Params size (MB): 2.42
+Estimated Total Size (MB): 2.64
+----------------------------------------------------------------
+Start training...
+Epoch 1/30
+TRAIN | loss: 0.8310 - global_acc: 0.6320 - class_acc: [0.6368 0.7963 0.3493 0.7466] 
+VALID | loss: 0.3105 - global_acc: 0.9144 - class_acc: [1.0000 0.9953 0.6633 0.9993] - BEST!
+Epoch 2/30
+TRAIN | loss: 0.4957 - global_acc: 0.7999 - class_acc: [0.8758 0.8388 0.4854 0.9895] 
+VALID | loss: 0.2165 - global_acc: 0.9748 - class_acc: [1.0000 1.0000 0.9039 0.9966] - BEST!
+Epoch 3/30
+TRAIN | loss: 0.4400 - global_acc: 0.8222 - class_acc: [0.9320 0.8836 0.4849 0.9874] 
+VALID | loss: 0.2319 - global_acc: 0.9593 - class_acc: [0.9873 1.0000 0.8484 1.0000]
+Epoch 4/30
+TRAIN | loss: 0.4102 - global_acc: 0.8353 - class_acc: [0.9294 0.9211 0.4941 0.9905] 
+VALID | loss: 0.1599 - global_acc: 0.9804 - class_acc: [0.9966 1.0000 0.9267 0.9993] - BEST!
+Epoch 5/30
+TRAIN | loss: 0.4068 - global_acc: 0.8357 - class_acc: [0.9349 0.9272 0.4910 0.9919] 
+VALID | loss: 0.1510 - global_acc: 0.9894 - class_acc: [1.0000 0.9993 0.9611 0.9973] - BEST!
+Epoch 6/30
+TRAIN | loss: 0.3541 - global_acc: 0.8843 - class_acc: [0.9408 0.9229 0.6879 0.9918] 
+VALID | loss: 0.1056 - global_acc: 0.9906 - class_acc: [1.0000 1.0000 0.9629 1.0000] - BEST!
+Epoch 7/30
+TRAIN | loss: 0.3347 - global_acc: 0.8944 - class_acc: [0.9315 0.9151 0.7410 0.9925] 
+VALID | loss: 0.1037 - global_acc: 0.9925 - class_acc: [1.0000 0.9993 0.9786 0.9926] - BEST!
+Epoch 8/30
+TRAIN | loss: 0.3180 - global_acc: 0.8994 - class_acc: [0.9334 0.9320 0.7328 0.9942] 
+VALID | loss: 0.0969 - global_acc: 0.9896 - class_acc: [1.0000 1.0000 0.9586 0.9993]
+Epoch 9/30
+TRAIN | loss: 0.3076 - global_acc: 0.9029 - class_acc: [0.9390 0.9350 0.7451 0.9942] 
+VALID | loss: 0.0869 - global_acc: 0.9927 - class_acc: [1.0000 1.0000 0.9703 1.0000] - BEST!
+Epoch 10/30
+TRAIN | loss: 0.2958 - global_acc: 0.9053 - class_acc: [0.9335 0.9379 0.7575 0.9956] 
+VALID | loss: 0.0987 - global_acc: 0.9930 - class_acc: [1.0000 1.0000 0.9722 1.0000] - BEST!
+Epoch 11/30
+TRAIN | loss: 0.3070 - global_acc: 0.9022 - class_acc: [0.9364 0.9287 0.7466 0.9976] 
+VALID | loss: 0.1380 - global_acc: 0.9779 - class_acc: [1.0000 0.9986 0.9649 0.9476]
+Epoch 12/30
+TRAIN | loss: 0.2997 - global_acc: 0.9033 - class_acc: [0.9406 0.9323 0.7432 0.9977] 
+VALID | loss: 0.0765 - global_acc: 0.9976 - class_acc: [1.0000 1.0000 0.9939 0.9967] - BEST!
+Epoch 13/30
+TRAIN | loss: 0.3062 - global_acc: 0.9026 - class_acc: [0.9377 0.9286 0.7494 0.9952] 
+VALID | loss: 0.0871 - global_acc: 0.9939 - class_acc: [1.0000 0.9993 0.9779 0.9987]
+Epoch 14/30
+TRAIN | loss: 0.2981 - global_acc: 0.9042 - class_acc: [0.9340 0.9370 0.7509 0.9975] 
+VALID | loss: 0.0860 - global_acc: 0.9946 - class_acc: [1.0000 1.0000 0.9785 0.9993]
+Epoch 15/30
+TRAIN | loss: 0.2929 - global_acc: 0.9058 - class_acc: [0.9339 0.9401 0.7494 0.9976] 
+VALID | loss: 0.1577 - global_acc: 0.9838 - class_acc: [1.0000 1.0000 0.9810 0.9540]
+Epoch 16/30
+TRAIN | loss: 0.2990 - global_acc: 0.9043 - class_acc: [0.9340 0.9336 0.7491 0.9968] 
+VALID | loss: 0.0714 - global_acc: 0.9978 - class_acc: [1.0000 1.0000 0.9937 0.9972] - BEST!
+Epoch 17/30
+TRAIN | loss: 0.2961 - global_acc: 0.9029 - class_acc: [0.9385 0.9304 0.7450 0.9986] 
+VALID | loss: 0.0872 - global_acc: 0.9986 - class_acc: [1.0000 1.0000 0.9952 0.9993] - BEST!
+Epoch 18/30
+TRAIN | loss: 0.2909 - global_acc: 0.9057 - class_acc: [0.9337 0.9393 0.7499 0.9991] 
+VALID | loss: 0.0897 - global_acc: 0.9952 - class_acc: [0.9953 0.9986 0.9876 0.9993]
+Epoch 19/30
+TRAIN | loss: 0.2942 - global_acc: 0.9043 - class_acc: [0.9345 0.9355 0.7465 0.9991] 
+VALID | loss: 0.0854 - global_acc: 0.9985 - class_acc: [1.0000 1.0000 0.9960 0.9979]
+Epoch 20/30
+TRAIN | loss: 0.2880 - global_acc: 0.9079 - class_acc: [0.9422 0.9381 0.7506 0.9973] 
+VALID | loss: 0.1008 - global_acc: 0.9911 - class_acc: [1.0000 0.9986 0.9698 0.9967]
+Epoch 21/30
+TRAIN | loss: 0.3112 - global_acc: 0.8989 - class_acc: [0.9218 0.9339 0.7433 0.9973] 
+VALID | loss: 0.0799 - global_acc: 0.9974 - class_acc: [1.0000 1.0000 0.9932 0.9967]
+Epoch 22/30
+TRAIN | loss: 0.2924 - global_acc: 0.9043 - class_acc: [0.9394 0.9367 0.7403 0.9973] 
+VALID | loss: 0.1046 - global_acc: 0.9889 - class_acc: [1.0000 0.9993 0.9542 1.0000]
+Epoch 23/30
+TRAIN | loss: 0.2917 - global_acc: 0.9052 - class_acc: [0.9352 0.9345 0.7514 0.9987] 
+VALID | loss: 0.1044 - global_acc: 0.9803 - class_acc: [1.0000 0.9993 0.9233 1.0000]
+Epoch 24/30
+TRAIN | loss: 0.2907 - global_acc: 0.9058 - class_acc: [0.9374 0.9349 0.7551 0.9973] 
+VALID | loss: 0.0829 - global_acc: 0.9946 - class_acc: [1.0000 1.0000 0.9777 1.0000]
+Epoch 25/30
+TRAIN | loss: 0.2938 - global_acc: 0.9019 - class_acc: [0.9400 0.9331 0.7401 0.9981] 
+VALID | loss: 0.0787 - global_acc: 0.9929 - class_acc: [1.0000 1.0000 0.9716 1.0000]
+Epoch 26/30
+TRAIN | loss: 0.2835 - global_acc: 0.9077 - class_acc: [0.9378 0.9401 0.7577 0.9986] 
+VALID | loss: 0.1165 - global_acc: 0.9879 - class_acc: [0.9762 0.9993 0.9840 0.9918]
+Epoch 27/30
+TRAIN | loss: 0.2999 - global_acc: 0.9007 - class_acc: [0.9346 0.9340 0.7392 0.9972] 
+VALID | loss: 0.0994 - global_acc: 0.9961 - class_acc: [1.0000 0.9986 0.9894 0.9966]
+Epoch 28/30
+TRAIN | loss: 0.2906 - global_acc: 0.9026 - class_acc: [0.9407 0.9380 0.7373 0.9986] 
+VALID | loss: 0.0917 - global_acc: 0.9934 - class_acc: [1.0000 1.0000 0.9736 1.0000]
+Epoch 29/30
+TRAIN | loss: 0.2888 - global_acc: 0.9062 - class_acc: [0.9376 0.9373 0.7490 0.9984] 
+VALID | loss: 0.0884 - global_acc: 0.9911 - class_acc: [1.0000 1.0000 0.9650 1.0000]
+Epoch 30/30
+TRAIN | loss: 0.2900 - global_acc: 0.9049 - class_acc: [0.9394 0.9346 0.7407 0.9993] 
+VALID | loss: 0.0705 - global_acc: 0.9981 - class_acc: [1.0000 1.0000 0.9940 0.9986]
+
+
+Evaluating...
+TEST | loss: 0.1362 - global_acc: 0.9997 - class_acc: [1.0000 1.0000 1.0000 0.9992]
+
+R 3
+
+Dataset preparation...
+Model preparation...
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv2d-1           [-1, 12, 13, 13]           1,776
+       BatchNorm2d-2           [-1, 12, 13, 13]              24
+              ReLU-3           [-1, 12, 13, 13]               0
+            Conv2d-4             [-1, 32, 9, 9]           9,632
+       BatchNorm2d-5             [-1, 32, 9, 9]              64
+              ReLU-6             [-1, 32, 9, 9]               0
+            Conv2d-7             [-1, 64, 7, 7]          18,496
+       BatchNorm2d-8             [-1, 64, 7, 7]             128
+              ReLU-9             [-1, 64, 7, 7]               0
+           Conv2d-10            [-1, 128, 2, 2]         204,928
+      BatchNorm2d-11            [-1, 128, 2, 2]             256
+             ReLU-12            [-1, 128, 2, 2]               0
+          Flatten-13                  [-1, 512]               0
+           Linear-14                  [-1, 256]         131,328
+             ReLU-15                  [-1, 256]               0
+           Linear-16                    [-1, 5]           1,285
+             ReLU-17                    [-1, 5]               0
+          Dropout-18                    [-1, 5]               0
+          Encoder-19                    [-1, 5]               0
+           Linear-20                  [-1, 256]           1,536
+             ReLU-21                  [-1, 256]               0
+          Dropout-22                  [-1, 256]               0
+           Linear-23                  [-1, 512]         131,584
+             ReLU-24                  [-1, 512]               0
+           Linear-25                  [-1, 256]         131,328
+             ReLU-26                  [-1, 256]               0
+           Linear-27                    [-1, 4]           1,028
+      OutputLayer-28                    [-1, 4]               0
+================================================================
+Total params: 633,393
+Trainable params: 633,393
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 0.01
+Forward/backward pass size (MB): 0.21
+Params size (MB): 2.42
+Estimated Total Size (MB): 2.64
+----------------------------------------------------------------
+Start training...
+Epoch 1/30
+TRAIN | loss: 0.8497 - global_acc: 0.6260 - class_acc: [0.4689 0.7954 0.6732 0.5666] 
+VALID | loss: 0.2296 - global_acc: 0.9374 - class_acc: [1.0000 0.9889 0.9627 0.8001] - BEST!
+Epoch 2/30
+TRAIN | loss: 0.4809 - global_acc: 0.8130 - class_acc: [0.7581 0.8047 0.9738 0.7154] 
+VALID | loss: 0.1114 - global_acc: 0.9818 - class_acc: [1.0000 1.0000 0.9682 0.9582] - BEST!
+Epoch 3/30
+TRAIN | loss: 0.3905 - global_acc: 0.8499 - class_acc: [0.8597 0.8139 0.9842 0.7357] 
+VALID | loss: 0.0880 - global_acc: 0.9833 - class_acc: [1.0000 0.9980 0.9799 0.9535] - BEST!
+Epoch 4/30
+TRAIN | loss: 0.3576 - global_acc: 0.8588 - class_acc: [0.8732 0.8497 0.9836 0.7264] 
+VALID | loss: 0.0664 - global_acc: 0.9862 - class_acc: [1.0000 0.9980 0.9919 0.9562] - BEST!
+Epoch 5/30
+TRAIN | loss: 0.3134 - global_acc: 0.8832 - class_acc: [0.8742 0.9218 0.9904 0.7475] 
+VALID | loss: 0.1174 - global_acc: 0.9637 - class_acc: [0.9986 1.0000 0.9966 0.8569]
+Epoch 6/30
+TRAIN | loss: 0.3031 - global_acc: 0.8857 - class_acc: [0.8706 0.9366 0.9935 0.7402] 
+VALID | loss: 0.0375 - global_acc: 0.9913 - class_acc: [1.0000 0.9986 0.9878 0.9787] - BEST!
+Epoch 7/30
+TRAIN | loss: 0.2991 - global_acc: 0.8858 - class_acc: [0.8810 0.9348 0.9936 0.7333] 
+VALID | loss: 0.0746 - global_acc: 0.9779 - class_acc: [1.0000 1.0000 0.9965 0.9174]
+Epoch 8/30
+TRAIN | loss: 0.3044 - global_acc: 0.8808 - class_acc: [0.8691 0.9336 0.9946 0.7249] 
+VALID | loss: 0.0270 - global_acc: 0.9946 - class_acc: [1.0000 0.9993 0.9981 0.9814] - BEST!
+Epoch 9/30
+TRAIN | loss: 0.2970 - global_acc: 0.8836 - class_acc: [0.8663 0.9315 0.9939 0.7399] 
+VALID | loss: 0.0575 - global_acc: 0.9857 - class_acc: [1.0000 0.9952 0.9965 0.9519]
+Epoch 10/30
+TRAIN | loss: 0.2905 - global_acc: 0.8858 - class_acc: [0.8749 0.9311 0.9934 0.7419] 
+VALID | loss: 0.0345 - global_acc: 0.9927 - class_acc: [1.0000 0.9979 0.9980 0.9738]
+Epoch 11/30
+TRAIN | loss: 0.2923 - global_acc: 0.8856 - class_acc: [0.8771 0.9316 0.9941 0.7396] 
+VALID | loss: 0.0282 - global_acc: 0.9952 - class_acc: [1.0000 1.0000 0.9973 0.9839] - BEST!
+Epoch 12/30
+TRAIN | loss: 0.2913 - global_acc: 0.8845 - class_acc: [0.8673 0.9317 0.9961 0.7473] 
+VALID | loss: 0.0168 - global_acc: 0.9966 - class_acc: [1.0000 0.9993 0.9966 0.9902] - BEST!
+Epoch 13/30
+TRAIN | loss: 0.2839 - global_acc: 0.8884 - class_acc: [0.8759 0.9333 0.9970 0.7473] 
+VALID | loss: 0.0218 - global_acc: 0.9961 - class_acc: [1.0000 1.0000 0.9973 0.9871]
+Epoch 14/30
+TRAIN | loss: 0.2847 - global_acc: 0.8886 - class_acc: [0.8736 0.9325 0.9955 0.7498] 
+VALID | loss: 0.0373 - global_acc: 0.9918 - class_acc: [1.0000 0.9993 0.9987 0.9691]
+Epoch 15/30
+TRAIN | loss: 0.2768 - global_acc: 0.8896 - class_acc: [0.8761 0.9381 0.9975 0.7408] 
+VALID | loss: 0.0226 - global_acc: 0.9973 - class_acc: [1.0000 1.0000 0.9987 0.9901] - BEST!
+Epoch 16/30
+TRAIN | loss: 0.2845 - global_acc: 0.8852 - class_acc: [0.8648 0.9379 0.9975 0.7406] 
+VALID | loss: 0.0173 - global_acc: 0.9969 - class_acc: [1.0000 0.9993 0.9993 0.9891]
+Epoch 17/30
+TRAIN | loss: 0.2808 - global_acc: 0.8865 - class_acc: [0.8713 0.9349 0.9985 0.7409] 
+VALID | loss: 0.0263 - global_acc: 0.9959 - class_acc: [1.0000 1.0000 0.9966 0.9871]
+Epoch 18/30
+TRAIN | loss: 0.2763 - global_acc: 0.8898 - class_acc: [0.8810 0.9338 0.9977 0.7487] 
+VALID | loss: 0.0199 - global_acc: 0.9973 - class_acc: [1.0000 1.0000 0.9980 0.9910] - BEST!
+Epoch 19/30
+TRAIN | loss: 0.2783 - global_acc: 0.8887 - class_acc: [0.8719 0.9359 0.9971 0.7489] 
+VALID | loss: 0.0502 - global_acc: 0.9886 - class_acc: [1.0000 0.9986 0.9993 0.9567]
+Epoch 20/30
+TRAIN | loss: 0.2801 - global_acc: 0.8870 - class_acc: [0.8804 0.9317 0.9970 0.7392] 
+VALID | loss: 0.0180 - global_acc: 0.9959 - class_acc: [1.0000 1.0000 0.9965 0.9872]
+Epoch 21/30
+TRAIN | loss: 0.2706 - global_acc: 0.8930 - class_acc: [0.8754 0.9441 0.9973 0.7580] 
+VALID | loss: 0.0407 - global_acc: 0.9888 - class_acc: [1.0000 1.0000 0.9993 0.9566]
+Epoch 22/30
+TRAIN | loss: 0.2713 - global_acc: 0.8890 - class_acc: [0.8740 0.9423 0.9984 0.7446] 
+VALID | loss: 0.0300 - global_acc: 0.9935 - class_acc: [1.0000 0.9993 0.9993 0.9759]
+Epoch 23/30
+TRAIN | loss: 0.2699 - global_acc: 0.8923 - class_acc: [0.8795 0.9402 0.9986 0.7476] 
+VALID | loss: 0.0335 - global_acc: 0.9934 - class_acc: [1.0000 0.9993 0.9980 0.9763]
+Epoch 24/30
+TRAIN | loss: 0.2786 - global_acc: 0.8889 - class_acc: [0.8755 0.9333 0.9978 0.7519] 
+VALID | loss: 0.0130 - global_acc: 0.9973 - class_acc: [1.0000 0.9987 0.9993 0.9911]
+Epoch 25/30
+TRAIN | loss: 0.2786 - global_acc: 0.8879 - class_acc: [0.8730 0.9338 0.9979 0.7476] 
+VALID | loss: 0.0133 - global_acc: 0.9983 - class_acc: [1.0000 1.0000 0.9959 0.9974] - BEST!
+Epoch 26/30
+TRAIN | loss: 0.2738 - global_acc: 0.8891 - class_acc: [0.8819 0.9348 0.9986 0.7450] 
+VALID | loss: 0.0461 - global_acc: 0.9881 - class_acc: [1.0000 1.0000 0.9986 0.9555]
+Epoch 27/30
+TRAIN | loss: 0.2710 - global_acc: 0.8896 - class_acc: [0.8868 0.9396 0.9981 0.7417] 
+VALID | loss: 0.0386 - global_acc: 0.9922 - class_acc: [1.0000 0.9993 0.9979 0.9720]
+Epoch 28/30
+TRAIN | loss: 0.2803 - global_acc: 0.8889 - class_acc: [0.8788 0.9309 0.9959 0.7475] 
+VALID | loss: 0.0772 - global_acc: 0.9782 - class_acc: [1.0000 0.9987 0.9966 0.9160]
+Epoch 29/30
+TRAIN | loss: 0.2868 - global_acc: 0.8838 - class_acc: [0.8685 0.9310 0.9978 0.7346] 
+VALID | loss: 0.0213 - global_acc: 0.9957 - class_acc: [1.0000 1.0000 0.9883 0.9944]
+Epoch 30/30
+TRAIN | loss: 0.2805 - global_acc: 0.8866 - class_acc: [0.8678 0.9321 0.9977 0.7481] 
+VALID | loss: 0.0442 - global_acc: 0.9886 - class_acc: [1.0000 0.9986 0.9966 0.9598]
+
+
+Evaluating...
+TEST | loss: 0.0186 - global_acc: 0.9976 - class_acc: [1.0000 1.0000 0.9990 0.9949]
+
+R 4
+
+Dataset preparation...
+Model preparation...
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv2d-1           [-1, 12, 13, 13]           1,776
+       BatchNorm2d-2           [-1, 12, 13, 13]              24
+              ReLU-3           [-1, 12, 13, 13]               0
+            Conv2d-4             [-1, 32, 9, 9]           9,632
+       BatchNorm2d-5             [-1, 32, 9, 9]              64
+              ReLU-6             [-1, 32, 9, 9]               0
+            Conv2d-7             [-1, 64, 7, 7]          18,496
+       BatchNorm2d-8             [-1, 64, 7, 7]             128
+              ReLU-9             [-1, 64, 7, 7]               0
+           Conv2d-10            [-1, 128, 2, 2]         204,928
+      BatchNorm2d-11            [-1, 128, 2, 2]             256
+             ReLU-12            [-1, 128, 2, 2]               0
+          Flatten-13                  [-1, 512]               0
+           Linear-14                  [-1, 256]         131,328
+             ReLU-15                  [-1, 256]               0
+           Linear-16                    [-1, 5]           1,285
+             ReLU-17                    [-1, 5]               0
+          Dropout-18                    [-1, 5]               0
+          Encoder-19                    [-1, 5]               0
+           Linear-20                  [-1, 256]           1,536
+             ReLU-21                  [-1, 256]               0
+          Dropout-22                  [-1, 256]               0
+           Linear-23                  [-1, 512]         131,584
+             ReLU-24                  [-1, 512]               0
+           Linear-25                  [-1, 256]         131,328
+             ReLU-26                  [-1, 256]               0
+           Linear-27                    [-1, 4]           1,028
+      OutputLayer-28                    [-1, 4]               0
+================================================================
+Total params: 633,393
+Trainable params: 633,393
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 0.01
+Forward/backward pass size (MB): 0.21
+Params size (MB): 2.42
+Estimated Total Size (MB): 2.64
+----------------------------------------------------------------
+Start training...
+Epoch 1/30
+TRAIN | loss: 0.9403 - global_acc: 0.5693 - class_acc: [0.7783 0.3156 0.5921 0.5919] 
+VALID | loss: 0.3500 - global_acc: 0.9411 - class_acc: [1.0000 0.9973 0.7599 0.9993] - BEST!
+Epoch 2/30
+TRAIN | loss: 0.5315 - global_acc: 0.7986 - class_acc: [0.9772 0.6375 0.8256 0.7482] 
+VALID | loss: 0.1420 - global_acc: 0.9586 - class_acc: [1.0000 0.9973 0.9791 0.8584] - BEST!
+Epoch 3/30
+TRAIN | loss: 0.4133 - global_acc: 0.8486 - class_acc: [0.9432 0.7721 0.8449 0.8300] 
+VALID | loss: 0.0670 - global_acc: 0.9833 - class_acc: [1.0000 1.0000 0.9871 0.9474] - BEST!
+Epoch 4/30
+TRAIN | loss: 0.3531 - global_acc: 0.8652 - class_acc: [0.9547 0.7836 0.8619 0.8588] 
+VALID | loss: 0.6081 - global_acc: 0.8390 - class_acc: [1.0000 1.0000 0.5698 0.7801]
+Epoch 5/30
+TRAIN | loss: 0.3341 - global_acc: 0.8711 - class_acc: [0.9572 0.7779 0.8928 0.8575] 
+VALID | loss: 0.0296 - global_acc: 0.9944 - class_acc: [1.0000 0.9979 0.9879 0.9921] - BEST!
+Epoch 6/30
+TRAIN | loss: 0.3259 - global_acc: 0.8753 - class_acc: [0.9591 0.7694 0.9039 0.8684] 
+VALID | loss: 0.0396 - global_acc: 0.9927 - class_acc: [1.0000 1.0000 0.9782 0.9923]
+Epoch 7/30
+TRAIN | loss: 0.3122 - global_acc: 0.8762 - class_acc: [0.9520 0.7754 0.9156 0.8661] 
+VALID | loss: 0.0224 - global_acc: 0.9956 - class_acc: [1.0000 1.0000 0.9882 0.9938] - BEST!
+Epoch 8/30
+TRAIN | loss: 0.3042 - global_acc: 0.8810 - class_acc: [0.9644 0.7561 0.9275 0.8753] 
+VALID | loss: 0.0294 - global_acc: 0.9935 - class_acc: [1.0000 1.0000 0.9759 0.9987]
+Epoch 9/30
+TRAIN | loss: 0.2925 - global_acc: 0.8806 - class_acc: [0.9645 0.7514 0.9320 0.8742] 
+VALID | loss: 0.0218 - global_acc: 0.9952 - class_acc: [1.0000 1.0000 0.9818 0.9993]
+Epoch 10/30
+TRAIN | loss: 0.3022 - global_acc: 0.8797 - class_acc: [0.9756 0.7550 0.9229 0.8666] 
+VALID | loss: 0.0381 - global_acc: 0.9872 - class_acc: [1.0000 1.0000 0.9498 1.0000]
+Epoch 11/30
+TRAIN | loss: 0.2829 - global_acc: 0.8881 - class_acc: [0.9848 0.7629 0.9375 0.8684] 
+VALID | loss: 0.0941 - global_acc: 0.9750 - class_acc: [1.0000 0.9811 0.9584 0.9610]
+Epoch 12/30
+TRAIN | loss: 0.2898 - global_acc: 0.8834 - class_acc: [0.9823 0.7526 0.9268 0.8760] 
+VALID | loss: 0.0241 - global_acc: 0.9949 - class_acc: [1.0000 1.0000 0.9791 1.0000]
+Epoch 13/30
+TRAIN | loss: 0.2762 - global_acc: 0.8891 - class_acc: [0.9850 0.7640 0.9317 0.8778] 
+VALID | loss: 0.0299 - global_acc: 0.9930 - class_acc: [1.0000 1.0000 0.9723 1.0000]
+Epoch 14/30
+TRAIN | loss: 0.2836 - global_acc: 0.8871 - class_acc: [0.9897 0.7540 0.9327 0.8708] 
+VALID | loss: 0.0156 - global_acc: 0.9964 - class_acc: [1.0000 1.0000 0.9860 1.0000] - BEST!
+Epoch 15/30
+TRAIN | loss: 0.2859 - global_acc: 0.8863 - class_acc: [0.9941 0.7518 0.9302 0.8716] 
+VALID | loss: 1.4013 - global_acc: 0.7283 - class_acc: [1.0000 1.0000 0.0912 0.8253]
+Epoch 16/30
+TRAIN | loss: 0.2828 - global_acc: 0.8867 - class_acc: [0.9911 0.7520 0.9330 0.8734] 
+VALID | loss: 0.0154 - global_acc: 0.9978 - class_acc: [0.9993 1.0000 0.9932 0.9986] - BEST!
+Epoch 17/30
+TRAIN | loss: 0.2825 - global_acc: 0.8864 - class_acc: [0.9945 0.7576 0.9298 0.8658] 
+VALID | loss: 0.0154 - global_acc: 0.9976 - class_acc: [1.0000 0.9993 0.9924 0.9986]
+Epoch 18/30
+TRAIN | loss: 0.2821 - global_acc: 0.8853 - class_acc: [0.9941 0.7451 0.9363 0.8673] 
+VALID | loss: 0.0062 - global_acc: 0.9981 - class_acc: [1.0000 1.0000 0.9940 0.9986] - BEST!
+Epoch 19/30
+TRAIN | loss: 0.2772 - global_acc: 0.8870 - class_acc: [0.9953 0.7503 0.9330 0.8732] 
+VALID | loss: 0.0704 - global_acc: 0.9706 - class_acc: [1.0000 1.0000 0.8782 0.9993]
+Epoch 20/30
+TRAIN | loss: 0.2856 - global_acc: 0.8888 - class_acc: [0.9977 0.7525 0.9287 0.8702] 
+VALID | loss: 0.0116 - global_acc: 0.9973 - class_acc: [1.0000 1.0000 0.9901 0.9993]
+Epoch 21/30
+TRAIN | loss: 0.2740 - global_acc: 0.8913 - class_acc: [0.9979 0.7602 0.9325 0.8750] 
+VALID | loss: 0.0198 - global_acc: 0.9947 - class_acc: [0.9957 1.0000 0.9831 0.9993]
+Epoch 22/30
+TRAIN | loss: 0.2777 - global_acc: 0.8877 - class_acc: [0.9962 0.7453 0.9337 0.8755] 
+VALID | loss: 0.0066 - global_acc: 0.9988 - class_acc: [1.0000 1.0000 0.9953 1.0000] - BEST!
+Epoch 23/30
+TRAIN | loss: 0.2736 - global_acc: 0.8898 - class_acc: [0.9975 0.7471 0.9364 0.8788] 
+VALID | loss: 0.0155 - global_acc: 0.9959 - class_acc: [1.0000 1.0000 0.9839 1.0000]
+Epoch 24/30
+TRAIN | loss: 0.2797 - global_acc: 0.8860 - class_acc: [0.9989 0.7414 0.9337 0.8641] 
+VALID | loss: 0.0095 - global_acc: 0.9980 - class_acc: [0.9993 1.0000 0.9927 1.0000]
+Epoch 25/30
+TRAIN | loss: 0.2716 - global_acc: 0.8885 - class_acc: [0.9993 0.7458 0.9408 0.8681] 
+VALID | loss: 0.0064 - global_acc: 0.9991 - class_acc: [0.9993 1.0000 0.9973 1.0000] - BEST!
+Epoch 26/30
+TRAIN | loss: 0.2813 - global_acc: 0.8879 - class_acc: [0.9971 0.7512 0.9322 0.8723] 
+VALID | loss: 0.0157 - global_acc: 0.9947 - class_acc: [1.0000 0.9993 0.9798 0.9993]
+Epoch 27/30
+TRAIN | loss: 0.2750 - global_acc: 0.8893 - class_acc: [0.9996 0.7445 0.9402 0.8728] 
+VALID | loss: 0.0124 - global_acc: 0.9969 - class_acc: [1.0000 1.0000 0.9885 0.9993]
+Epoch 28/30
+TRAIN | loss: 0.2702 - global_acc: 0.8926 - class_acc: [0.9991 0.7556 0.9336 0.8794] 
+VALID | loss: 0.0144 - global_acc: 0.9954 - class_acc: [1.0000 1.0000 0.9828 0.9993]
+Epoch 29/30
+TRAIN | loss: 0.2768 - global_acc: 0.8903 - class_acc: [0.9996 0.7588 0.9392 0.8628] 
+VALID | loss: 0.0061 - global_acc: 0.9988 - class_acc: [1.0000 1.0000 1.0000 0.9952]
+Epoch 30/30
+TRAIN | loss: 0.2826 - global_acc: 0.8887 - class_acc: [0.9995 0.7528 0.9293 0.8722] 
+VALID | loss: 0.0240 - global_acc: 0.9949 - class_acc: [0.9993 1.0000 0.9803 1.0000]
+
+
+Evaluating...
+TEST | loss: 0.0024 - global_acc: 0.9995 - class_acc: [1.0000 1.0000 0.9990 0.9996]
+
+R 5
+
+Dataset preparation...
+Model preparation...
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv2d-1           [-1, 12, 13, 13]           1,776
+       BatchNorm2d-2           [-1, 12, 13, 13]              24
+              ReLU-3           [-1, 12, 13, 13]               0
+            Conv2d-4             [-1, 32, 9, 9]           9,632
+       BatchNorm2d-5             [-1, 32, 9, 9]              64
+              ReLU-6             [-1, 32, 9, 9]               0
+            Conv2d-7             [-1, 64, 7, 7]          18,496
+       BatchNorm2d-8             [-1, 64, 7, 7]             128
+              ReLU-9             [-1, 64, 7, 7]               0
+           Conv2d-10            [-1, 128, 2, 2]         204,928
+      BatchNorm2d-11            [-1, 128, 2, 2]             256
+             ReLU-12            [-1, 128, 2, 2]               0
+          Flatten-13                  [-1, 512]               0
+           Linear-14                  [-1, 256]         131,328
+             ReLU-15                  [-1, 256]               0
+           Linear-16                    [-1, 5]           1,285
+             ReLU-17                    [-1, 5]               0
+          Dropout-18                    [-1, 5]               0
+          Encoder-19                    [-1, 5]               0
+           Linear-20                  [-1, 256]           1,536
+             ReLU-21                  [-1, 256]               0
+          Dropout-22                  [-1, 256]               0
+           Linear-23                  [-1, 512]         131,584
+             ReLU-24                  [-1, 512]               0
+           Linear-25                  [-1, 256]         131,328
+             ReLU-26                  [-1, 256]               0
+           Linear-27                    [-1, 4]           1,028
+      OutputLayer-28                    [-1, 4]               0
+================================================================
+Total params: 633,393
+Trainable params: 633,393
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 0.01
+Forward/backward pass size (MB): 0.21
+Params size (MB): 2.42
+Estimated Total Size (MB): 2.64
+----------------------------------------------------------------
+Start training...
+Epoch 1/30
+TRAIN | loss: 0.9932 - global_acc: 0.5164 - class_acc: [0.6372 0.8161 0.3423 0.2621] 
+VALID | loss: 0.3554 - global_acc: 0.9459 - class_acc: [1.0000 0.9966 0.9611 0.8256] - BEST!
+Epoch 2/30
+TRAIN | loss: 0.5977 - global_acc: 0.7681 - class_acc: [0.7477 0.8617 0.9720 0.4834] 
+VALID | loss: 6.5718 - global_acc: 0.4889 - class_acc: [0.9435 1.0000 0.0000 0.0202]
+Epoch 3/30
+TRAIN | loss: 0.5153 - global_acc: 0.7951 - class_acc: [0.8280 0.8741 0.9875 0.4895] 
+VALID | loss: 0.1924 - global_acc: 0.9849 - class_acc: [1.0000 0.9993 0.9778 0.9629] - BEST!
+Epoch 4/30
+TRAIN | loss: 0.4274 - global_acc: 0.8208 - class_acc: [0.9250 0.8773 0.9902 0.4983] 
+VALID | loss: 0.1630 - global_acc: 0.9893 - class_acc: [0.9986 0.9987 0.9692 0.9905] - BEST!
+Epoch 5/30
+TRAIN | loss: 0.4093 - global_acc: 0.8348 - class_acc: [0.9369 0.9046 0.9915 0.5033] 
+VALID | loss: 0.2033 - global_acc: 0.9612 - class_acc: [1.0000 0.9903 1.0000 0.8577]
+Epoch 6/30
+TRAIN | loss: 0.3966 - global_acc: 0.8381 - class_acc: [0.9311 0.9312 0.9950 0.4963] 
+VALID | loss: 0.1798 - global_acc: 0.9906 - class_acc: [1.0000 0.9993 0.9806 0.9824] - BEST!
+Epoch 7/30
+TRAIN | loss: 0.3840 - global_acc: 0.8407 - class_acc: [0.9418 0.9336 0.9956 0.4973] 
+VALID | loss: 0.1779 - global_acc: 0.9854 - class_acc: [1.0000 1.0000 0.9946 0.9462]
+Epoch 8/30
+TRAIN | loss: 0.3961 - global_acc: 0.8358 - class_acc: [0.9339 0.9258 0.9970 0.4913] 
+VALID | loss: 0.1559 - global_acc: 0.9940 - class_acc: [1.0000 0.9987 0.9939 0.9831] - BEST!
+Epoch 9/30
+TRAIN | loss: 0.3798 - global_acc: 0.8402 - class_acc: [0.9378 0.9438 0.9968 0.4885] 
+VALID | loss: 0.1631 - global_acc: 0.9942 - class_acc: [1.0000 0.9980 0.9877 0.9910] - BEST!
+Epoch 10/30
+TRAIN | loss: 0.3780 - global_acc: 0.8422 - class_acc: [0.9360 0.9385 0.9970 0.4945] 
+VALID | loss: 0.1577 - global_acc: 0.9969 - class_acc: [0.9993 1.0000 0.9958 0.9926] - BEST!
+Epoch 11/30
+TRAIN | loss: 0.3801 - global_acc: 0.8407 - class_acc: [0.9376 0.9397 0.9965 0.4981] 
+VALID | loss: 0.2686 - global_acc: 0.9648 - class_acc: [1.0000 0.9980 0.9315 0.9300]
+Epoch 12/30
+TRAIN | loss: 0.3826 - global_acc: 0.8415 - class_acc: [0.9417 0.9288 0.9980 0.5021] 
+VALID | loss: 0.1460 - global_acc: 0.9934 - class_acc: [1.0000 0.9980 0.9945 0.9810]
+Epoch 13/30
+TRAIN | loss: 0.3753 - global_acc: 0.8459 - class_acc: [0.9387 0.9360 0.9980 0.4988] 
+VALID | loss: 0.1893 - global_acc: 0.9857 - class_acc: [1.0000 0.9959 0.9955 0.9505]
+Epoch 14/30
+TRAIN | loss: 0.3808 - global_acc: 0.8361 - class_acc: [0.9327 0.9407 0.9965 0.4937] 
+VALID | loss: 0.1455 - global_acc: 0.9974 - class_acc: [1.0000 0.9993 0.9960 0.9945] - BEST!
+Epoch 15/30
+TRAIN | loss: 0.3824 - global_acc: 0.8409 - class_acc: [0.9338 0.9347 0.9980 0.5002] 
+VALID | loss: 0.1482 - global_acc: 0.9951 - class_acc: [1.0000 1.0000 0.9959 0.9845]
+Epoch 16/30
+TRAIN | loss: 0.3756 - global_acc: 0.8468 - class_acc: [0.9389 0.9339 0.9973 0.5096] 
+VALID | loss: 0.1523 - global_acc: 0.9911 - class_acc: [1.0000 1.0000 0.9959 0.9686]
+Epoch 17/30
+TRAIN | loss: 0.3787 - global_acc: 0.8440 - class_acc: [0.9377 0.9347 0.9977 0.5040] 
+VALID | loss: 0.1787 - global_acc: 0.9855 - class_acc: [0.9954 0.9987 0.9943 0.9528]
+Epoch 18/30
+TRAIN | loss: 0.3745 - global_acc: 0.8438 - class_acc: [0.9385 0.9396 0.9975 0.4976] 
+VALID | loss: 0.1664 - global_acc: 0.9888 - class_acc: [1.0000 0.9993 0.9980 0.9572]
+Epoch 19/30
+TRAIN | loss: 0.3765 - global_acc: 0.8404 - class_acc: [0.9372 0.9394 0.9984 0.4894] 
+VALID | loss: 0.1374 - global_acc: 0.9974 - class_acc: [1.0000 1.0000 0.9966 0.9931]
+Epoch 20/30
+TRAIN | loss: 0.3915 - global_acc: 0.8377 - class_acc: [0.9318 0.9305 0.9972 0.4983] 
+VALID | loss: 0.1810 - global_acc: 0.9826 - class_acc: [0.9917 0.9966 0.9987 0.9427]
+Epoch 21/30
+TRAIN | loss: 0.3770 - global_acc: 0.8417 - class_acc: [0.9391 0.9342 0.9986 0.4959] 
+VALID | loss: 0.1336 - global_acc: 0.9973 - class_acc: [0.9993 0.9979 0.9945 0.9973]
+Epoch 22/30
+TRAIN | loss: 0.3825 - global_acc: 0.8403 - class_acc: [0.9364 0.9341 0.9980 0.4938] 
+VALID | loss: 0.1515 - global_acc: 0.9974 - class_acc: [1.0000 1.0000 0.9987 0.9911]
+Epoch 23/30
+TRAIN | loss: 0.3743 - global_acc: 0.8445 - class_acc: [0.9390 0.9382 0.9984 0.4894] 
+VALID | loss: 0.1227 - global_acc: 0.9985 - class_acc: [1.0000 1.0000 0.9986 0.9953] - BEST!
+Epoch 24/30
+TRAIN | loss: 0.3744 - global_acc: 0.8429 - class_acc: [0.9360 0.9405 0.9991 0.5012] 
+VALID | loss: 0.1610 - global_acc: 0.9940 - class_acc: [1.0000 1.0000 1.0000 0.9760]
+Epoch 25/30
+TRAIN | loss: 0.3724 - global_acc: 0.8431 - class_acc: [0.9364 0.9396 0.9993 0.4969] 
+VALID | loss: 0.1436 - global_acc: 0.9990 - class_acc: [1.0000 1.0000 0.9980 0.9979] - BEST!
+Epoch 26/30
+TRAIN | loss: 0.3759 - global_acc: 0.8427 - class_acc: [0.9380 0.9362 0.9993 0.4908] 
+VALID | loss: 0.1636 - global_acc: 0.9860 - class_acc: [1.0000 1.0000 1.0000 0.9435]
+Epoch 27/30
+TRAIN | loss: 0.3798 - global_acc: 0.8402 - class_acc: [0.9317 0.9380 0.9986 0.5008] 
+VALID | loss: 0.1514 - global_acc: 0.9983 - class_acc: [1.0000 1.0000 0.9967 0.9965]
+Epoch 28/30
+TRAIN | loss: 0.3902 - global_acc: 0.8383 - class_acc: [0.9306 0.9321 0.9989 0.4920] 
+VALID | loss: 0.1759 - global_acc: 0.9831 - class_acc: [1.0000 0.9965 0.9937 0.9425]
+Epoch 29/30
+TRAIN | loss: 0.3762 - global_acc: 0.8438 - class_acc: [0.9409 0.9332 0.9975 0.5027] 
+VALID | loss: 0.1450 - global_acc: 0.9932 - class_acc: [1.0000 0.9993 0.9979 0.9759]
+Epoch 30/30
+TRAIN | loss: 0.3803 - global_acc: 0.8401 - class_acc: [0.9357 0.9351 0.9987 0.4947] 
+VALID | loss: 0.1898 - global_acc: 0.9951 - class_acc: [1.0000 1.0000 0.9918 0.9880]
+
+
+Evaluating...
+TEST | loss: 0.1810 - global_acc: 0.9978 - class_acc: [1.0000 1.0000 1.0000 0.9945]
+
+R 6
+
+Dataset preparation...
+Model preparation...
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv2d-1           [-1, 12, 13, 13]           1,776
+       BatchNorm2d-2           [-1, 12, 13, 13]              24
+              ReLU-3           [-1, 12, 13, 13]               0
+            Conv2d-4             [-1, 32, 9, 9]           9,632
+       BatchNorm2d-5             [-1, 32, 9, 9]              64
+              ReLU-6             [-1, 32, 9, 9]               0
+            Conv2d-7             [-1, 64, 7, 7]          18,496
+       BatchNorm2d-8             [-1, 64, 7, 7]             128
+              ReLU-9             [-1, 64, 7, 7]               0
+           Conv2d-10            [-1, 128, 2, 2]         204,928
+      BatchNorm2d-11            [-1, 128, 2, 2]             256
+             ReLU-12            [-1, 128, 2, 2]               0
+          Flatten-13                  [-1, 512]               0
+           Linear-14                  [-1, 256]         131,328
+             ReLU-15                  [-1, 256]               0
+           Linear-16                    [-1, 5]           1,285
+             ReLU-17                    [-1, 5]               0
+          Dropout-18                    [-1, 5]               0
+          Encoder-19                    [-1, 5]               0
+           Linear-20                  [-1, 256]           1,536
+             ReLU-21                  [-1, 256]               0
+          Dropout-22                  [-1, 256]               0
+           Linear-23                  [-1, 512]         131,584
+             ReLU-24                  [-1, 512]               0
+           Linear-25                  [-1, 256]         131,328
+             ReLU-26                  [-1, 256]               0
+           Linear-27                    [-1, 4]           1,028
+      OutputLayer-28                    [-1, 4]               0
+================================================================
+Total params: 633,393
+Trainable params: 633,393
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 0.01
+Forward/backward pass size (MB): 0.21
+Params size (MB): 2.42
+Estimated Total Size (MB): 2.64
+----------------------------------------------------------------
+Start training...
+Epoch 1/30
+TRAIN | loss: 0.9527 - global_acc: 0.5364 - class_acc: [0.5907 0.8153 0.5883 0.1520] 
+VALID | loss: 0.4841 - global_acc: 0.8742 - class_acc: [1.0000 1.0000 0.6452 0.8581] - BEST!
+Epoch 2/30
+TRAIN | loss: 0.6463 - global_acc: 0.7377 - class_acc: [0.6815 0.8588 0.8923 0.5242] 
+VALID | loss: 0.2582 - global_acc: 0.9643 - class_acc: [0.9986 0.9973 0.8720 0.9911] - BEST!
+Epoch 3/30
+TRAIN | loss: 0.5720 - global_acc: 0.7746 - class_acc: [0.7442 0.8705 0.9846 0.4946] 
+VALID | loss: 0.2342 - global_acc: 0.9833 - class_acc: [1.0000 0.9979 0.9846 0.9498] - BEST!
+Epoch 4/30
+TRAIN | loss: 0.5616 - global_acc: 0.7742 - class_acc: [0.7471 0.8645 0.9894 0.4952] 
+VALID | loss: 0.2373 - global_acc: 0.9796 - class_acc: [0.9788 1.0000 0.9432 0.9959]
+Epoch 5/30
+TRAIN | loss: 0.5517 - global_acc: 0.7789 - class_acc: [0.7502 0.8690 0.9914 0.5069] 
+VALID | loss: 0.6338 - global_acc: 0.8917 - class_acc: [0.9855 1.0000 0.7033 0.8881]
+Epoch 6/30
+TRAIN | loss: 0.4727 - global_acc: 0.8345 - class_acc: [0.7528 0.8822 0.9873 0.7152] 
+VALID | loss: 0.1654 - global_acc: 0.9920 - class_acc: [0.9979 0.9979 0.9921 0.9802] - BEST!
+Epoch 7/30
+TRAIN | loss: 0.4842 - global_acc: 0.8326 - class_acc: [0.7522 0.8620 0.9874 0.7283] 
+VALID | loss: 0.1637 - global_acc: 0.9862 - class_acc: [1.0000 0.9993 0.9508 0.9931]
+Epoch 8/30
+TRAIN | loss: 0.4587 - global_acc: 0.8393 - class_acc: [0.7508 0.8634 0.9913 0.7522] 
+VALID | loss: 0.1365 - global_acc: 0.9963 - class_acc: [1.0000 1.0000 0.9867 0.9986] - BEST!
+Epoch 9/30
+TRAIN | loss: 0.4537 - global_acc: 0.8397 - class_acc: [0.7443 0.8695 0.9964 0.7482] 
+VALID | loss: 0.1387 - global_acc: 0.9925 - class_acc: [0.9959 1.0000 0.9750 0.9987]
+Epoch 10/30
+TRAIN | loss: 0.4561 - global_acc: 0.8387 - class_acc: [0.7468 0.8624 0.9952 0.7517] 
+VALID | loss: 0.1381 - global_acc: 0.9963 - class_acc: [1.0000 0.9986 0.9972 0.9893]
+Epoch 11/30
+TRAIN | loss: 0.4410 - global_acc: 0.8434 - class_acc: [0.7497 0.8765 0.9977 0.7525] 
+VALID | loss: 0.1242 - global_acc: 0.9983 - class_acc: [1.0000 1.0000 0.9945 0.9986] - BEST!
+Epoch 12/30
+TRAIN | loss: 0.4461 - global_acc: 0.8412 - class_acc: [0.7553 0.8757 0.9977 0.7355] 
+VALID | loss: 0.1382 - global_acc: 0.9957 - class_acc: [1.0000 0.9973 0.9913 0.9944]
+Epoch 13/30
+TRAIN | loss: 0.4448 - global_acc: 0.8409 - class_acc: [0.7465 0.8759 0.9958 0.7457] 
+VALID | loss: 0.1395 - global_acc: 0.9980 - class_acc: [1.0000 1.0000 0.9926 0.9993]
+Epoch 14/30
+TRAIN | loss: 0.4465 - global_acc: 0.8382 - class_acc: [0.7428 0.8745 0.9984 0.7415] 
+VALID | loss: 0.1390 - global_acc: 0.9969 - class_acc: [1.0000 0.9973 0.9980 0.9926]
+Epoch 15/30
+TRAIN | loss: 0.4431 - global_acc: 0.8432 - class_acc: [0.7540 0.8748 0.9968 0.7480] 
+VALID | loss: 0.1355 - global_acc: 0.9942 - class_acc: [1.0000 1.0000 0.9980 0.9785]
+Epoch 16/30
+TRAIN | loss: 0.4429 - global_acc: 0.8410 - class_acc: [0.7453 0.8850 0.9965 0.7387] 
+VALID | loss: 0.1356 - global_acc: 0.9973 - class_acc: [1.0000 1.0000 0.9986 0.9904]
+Epoch 17/30
+TRAIN | loss: 0.4416 - global_acc: 0.8427 - class_acc: [0.7503 0.8768 0.9975 0.7471] 
+VALID | loss: 0.1448 - global_acc: 0.9947 - class_acc: [1.0000 1.0000 0.9993 0.9790]
+Epoch 18/30
+TRAIN | loss: 0.4418 - global_acc: 0.8423 - class_acc: [0.7513 0.8789 0.9979 0.7417] 
+VALID | loss: 0.1195 - global_acc: 0.9981 - class_acc: [0.9993 1.0000 0.9979 0.9952]
+Epoch 19/30
+TRAIN | loss: 0.4435 - global_acc: 0.8430 - class_acc: [0.7446 0.8748 0.9966 0.7590] 
+VALID | loss: 0.1284 - global_acc: 0.9976 - class_acc: [1.0000 0.9993 0.9965 0.9946]
+Epoch 20/30
+TRAIN | loss: 0.4292 - global_acc: 0.8469 - class_acc: [0.7560 0.8809 0.9977 0.7564] 
+VALID | loss: 0.1292 - global_acc: 0.9978 - class_acc: [1.0000 1.0000 0.9933 0.9979]
+Epoch 21/30
+TRAIN | loss: 0.4441 - global_acc: 0.8449 - class_acc: [0.7586 0.8731 0.9968 0.7495] 
+VALID | loss: 0.1387 - global_acc: 0.9894 - class_acc: [1.0000 0.9993 0.9979 0.9607]
+Epoch 22/30
+TRAIN | loss: 0.4393 - global_acc: 0.8433 - class_acc: [0.7537 0.8758 0.9975 0.7454] 
+VALID | loss: 0.1370 - global_acc: 0.9985 - class_acc: [1.0000 0.9994 0.9973 0.9971] - BEST!
+Epoch 23/30
+TRAIN | loss: 0.4427 - global_acc: 0.8415 - class_acc: [0.7528 0.8773 0.9975 0.7386] 
+VALID | loss: 0.1329 - global_acc: 0.9993 - class_acc: [1.0000 1.0000 0.9980 0.9993] - BEST!
+Epoch 24/30
+TRAIN | loss: 0.4486 - global_acc: 0.8385 - class_acc: [0.7421 0.8685 0.9991 0.7475] 
+VALID | loss: 0.1386 - global_acc: 0.9981 - class_acc: [1.0000 1.0000 0.9940 0.9986]
+Epoch 25/30
+TRAIN | loss: 0.4361 - global_acc: 0.8441 - class_acc: [0.7455 0.8798 0.9986 0.7518] 
+VALID | loss: 0.1710 - global_acc: 0.9889 - class_acc: [0.9993 1.0000 0.9844 0.9727]
+Epoch 26/30
+TRAIN | loss: 0.4412 - global_acc: 0.8419 - class_acc: [0.7501 0.8766 0.9986 0.7464] 
+VALID | loss: 0.1404 - global_acc: 0.9971 - class_acc: [0.9979 1.0000 0.9907 1.0000]
+Epoch 27/30
+TRAIN | loss: 0.4449 - global_acc: 0.8398 - class_acc: [0.7457 0.8740 0.9984 0.7415] 
+VALID | loss: 0.1819 - global_acc: 0.9951 - class_acc: [0.9821 1.0000 0.9986 0.9993]
+Epoch 28/30
+TRAIN | loss: 0.4411 - global_acc: 0.8419 - class_acc: [0.7480 0.8730 0.9991 0.7472] 
+VALID | loss: 0.1561 - global_acc: 0.9935 - class_acc: [0.9875 1.0000 0.9993 0.9873]
+Epoch 29/30
+TRAIN | loss: 0.4427 - global_acc: 0.8408 - class_acc: [0.7568 0.8698 0.9986 0.7408] 
+VALID | loss: 0.1335 - global_acc: 0.9978 - class_acc: [0.9980 1.0000 0.9979 0.9951]
+Epoch 30/30
+TRAIN | loss: 0.4484 - global_acc: 0.8383 - class_acc: [0.7505 0.8669 0.9986 0.7376] 
+VALID | loss: 0.1373 - global_acc: 0.9978 - class_acc: [0.9941 1.0000 0.9993 0.9979]
+
+
+Evaluating...
+TEST | loss: 0.1802 - global_acc: 0.9963 - class_acc: [1.0000 1.0000 1.0000 0.9907]
+
+R 7
+
+Dataset preparation...
+Model preparation...
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv2d-1           [-1, 12, 13, 13]           1,776
+       BatchNorm2d-2           [-1, 12, 13, 13]              24
+              ReLU-3           [-1, 12, 13, 13]               0
+            Conv2d-4             [-1, 32, 9, 9]           9,632
+       BatchNorm2d-5             [-1, 32, 9, 9]              64
+              ReLU-6             [-1, 32, 9, 9]               0
+            Conv2d-7             [-1, 64, 7, 7]          18,496
+       BatchNorm2d-8             [-1, 64, 7, 7]             128
+              ReLU-9             [-1, 64, 7, 7]               0
+           Conv2d-10            [-1, 128, 2, 2]         204,928
+      BatchNorm2d-11            [-1, 128, 2, 2]             256
+             ReLU-12            [-1, 128, 2, 2]               0
+          Flatten-13                  [-1, 512]               0
+           Linear-14                  [-1, 256]         131,328
+             ReLU-15                  [-1, 256]               0
+           Linear-16                    [-1, 5]           1,285
+             ReLU-17                    [-1, 5]               0
+          Dropout-18                    [-1, 5]               0
+          Encoder-19                    [-1, 5]               0
+           Linear-20                  [-1, 256]           1,536
+             ReLU-21                  [-1, 256]               0
+          Dropout-22                  [-1, 256]               0
+           Linear-23                  [-1, 512]         131,584
+             ReLU-24                  [-1, 512]               0
+           Linear-25                  [-1, 256]         131,328
+             ReLU-26                  [-1, 256]               0
+           Linear-27                    [-1, 4]           1,028
+      OutputLayer-28                    [-1, 4]               0
+================================================================
+Total params: 633,393
+Trainable params: 633,393
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 0.01
+Forward/backward pass size (MB): 0.21
+Params size (MB): 2.42
+Estimated Total Size (MB): 2.64
+----------------------------------------------------------------
+Start training...
+Epoch 1/30
+TRAIN | loss: 0.8832 - global_acc: 0.6045 - class_acc: [0.6709 0.3064 0.6601 0.7802] 
+VALID | loss: 0.3869 - global_acc: 0.9224 - class_acc: [1.0000 0.9675 0.7316 0.9993] - BEST!
+Epoch 2/30
+TRAIN | loss: 0.5173 - global_acc: 0.7891 - class_acc: [0.9970 0.4922 0.8358 0.8312] 
+VALID | loss: 0.2493 - global_acc: 0.9791 - class_acc: [1.0000 0.9883 0.9469 0.9822] - BEST!
+Epoch 3/30
+TRAIN | loss: 0.4746 - global_acc: 0.8056 - class_acc: [0.9964 0.4956 0.8446 0.8915] 
+VALID | loss: 0.2131 - global_acc: 0.9857 - class_acc: [1.0000 0.9953 0.9547 0.9936] - BEST!
+Epoch 4/30
+TRAIN | loss: 0.4421 - global_acc: 0.8238 - class_acc: [0.9971 0.4977 0.8762 0.9223] 
+VALID | loss: 0.3252 - global_acc: 0.9483 - class_acc: [1.0000 0.9986 0.9014 0.8991]
+Epoch 5/30
+TRAIN | loss: 0.4221 - global_acc: 0.8344 - class_acc: [0.9984 0.5010 0.9089 0.9231] 
+VALID | loss: 0.2033 - global_acc: 0.9864 - class_acc: [1.0000 0.9993 0.9541 0.9917] - BEST!
+Epoch 6/30
+TRAIN | loss: 0.4099 - global_acc: 0.8367 - class_acc: [0.9982 0.5002 0.9244 0.9288] 
+VALID | loss: 0.1716 - global_acc: 0.9881 - class_acc: [1.0000 0.9986 0.9556 0.9993] - BEST!
+Epoch 7/30
+TRAIN | loss: 0.4000 - global_acc: 0.8349 - class_acc: [0.9991 0.4954 0.9293 0.9311] 
+VALID | loss: 0.1853 - global_acc: 0.9855 - class_acc: [1.0000 0.9986 0.9473 0.9979]
+Epoch 8/30
+TRAIN | loss: 0.3955 - global_acc: 0.8374 - class_acc: [0.9987 0.4859 0.9325 0.9339] 
+VALID | loss: 0.1648 - global_acc: 0.9966 - class_acc: [1.0000 0.9993 0.9922 0.9947] - BEST!
+Epoch 9/30
+TRAIN | loss: 0.3868 - global_acc: 0.8428 - class_acc: [0.9995 0.5049 0.9347 0.9319] 
+VALID | loss: 0.1655 - global_acc: 0.9893 - class_acc: [1.0000 1.0000 0.9603 0.9973]
+Epoch 10/30
+TRAIN | loss: 0.3875 - global_acc: 0.8396 - class_acc: [0.9995 0.4911 0.9343 0.9351] 
+VALID | loss: 0.1918 - global_acc: 0.9784 - class_acc: [1.0000 1.0000 0.9140 1.0000]
+Epoch 11/30
+TRAIN | loss: 0.3909 - global_acc: 0.8376 - class_acc: [0.9998 0.4941 0.9288 0.9373] 
+VALID | loss: 0.1666 - global_acc: 0.9898 - class_acc: [1.0000 1.0000 0.9693 0.9903]
+Epoch 12/30
+TRAIN | loss: 0.3932 - global_acc: 0.8368 - class_acc: [1.0000 0.5082 0.9251 0.9341] 
+VALID | loss: 0.1592 - global_acc: 0.9966 - class_acc: [1.0000 1.0000 0.9886 0.9980]
+Epoch 13/30
+TRAIN | loss: 0.3835 - global_acc: 0.8449 - class_acc: [0.9998 0.5136 0.9320 0.9311] 
+VALID | loss: 0.1489 - global_acc: 0.9973 - class_acc: [1.0000 1.0000 0.9932 0.9961] - BEST!
+Epoch 14/30
+TRAIN | loss: 0.3822 - global_acc: 0.8428 - class_acc: [1.0000 0.5032 0.9356 0.9324] 
+VALID | loss: 0.1483 - global_acc: 0.9974 - class_acc: [1.0000 1.0000 0.9912 0.9987] - BEST!
+Epoch 15/30
+TRAIN | loss: 0.3863 - global_acc: 0.8427 - class_acc: [0.9993 0.5063 0.9313 0.9312] 
+VALID | loss: 0.1525 - global_acc: 0.9939 - class_acc: [1.0000 1.0000 0.9774 0.9980]
+Epoch 16/30
+TRAIN | loss: 0.3830 - global_acc: 0.8423 - class_acc: [0.9986 0.5073 0.9319 0.9395] 
+VALID | loss: 0.1649 - global_acc: 0.9884 - class_acc: [1.0000 1.0000 0.9656 0.9881]
+Epoch 17/30
+TRAIN | loss: 0.3857 - global_acc: 0.8402 - class_acc: [0.9995 0.4975 0.9306 0.9350] 
+VALID | loss: 0.1490 - global_acc: 0.9986 - class_acc: [1.0000 1.0000 0.9952 0.9993] - BEST!
+Epoch 18/30
+TRAIN | loss: 0.3694 - global_acc: 0.8475 - class_acc: [1.0000 0.5094 0.9403 0.9397] 
+VALID | loss: 0.1542 - global_acc: 0.9957 - class_acc: [1.0000 1.0000 0.9890 0.9938]
+Epoch 19/30
+TRAIN | loss: 0.3813 - global_acc: 0.8414 - class_acc: [1.0000 0.4977 0.9418 0.9271] 
+VALID | loss: 0.1579 - global_acc: 0.9951 - class_acc: [1.0000 1.0000 0.9911 0.9893]
+Epoch 20/30
+TRAIN | loss: 0.3833 - global_acc: 0.8415 - class_acc: [0.9998 0.4935 0.9335 0.9350] 
+VALID | loss: 0.1435 - global_acc: 0.9952 - class_acc: [1.0000 1.0000 0.9816 0.9993]
+Epoch 21/30
+TRAIN | loss: 0.3784 - global_acc: 0.8421 - class_acc: [1.0000 0.4917 0.9402 0.9343] 
+VALID | loss: 0.1457 - global_acc: 0.9976 - class_acc: [1.0000 1.0000 0.9930 0.9973]
+Epoch 22/30
+TRAIN | loss: 0.3866 - global_acc: 0.8378 - class_acc: [1.0000 0.4951 0.9314 0.9318] 
+VALID | loss: 0.1610 - global_acc: 0.9983 - class_acc: [1.0000 1.0000 0.9967 0.9966]
+Epoch 23/30
+TRAIN | loss: 0.3944 - global_acc: 0.8349 - class_acc: [0.9998 0.4813 0.9328 0.9346] 
+VALID | loss: 0.1762 - global_acc: 0.9860 - class_acc: [1.0000 0.9993 0.9454 0.9987]
+Epoch 24/30
+TRAIN | loss: 0.3796 - global_acc: 0.8421 - class_acc: [1.0000 0.4903 0.9351 0.9386] 
+VALID | loss: 0.1440 - global_acc: 0.9966 - class_acc: [1.0000 0.9993 0.9871 1.0000]
+Epoch 25/30
+TRAIN | loss: 0.3854 - global_acc: 0.8395 - class_acc: [0.9998 0.4941 0.9332 0.9321] 
+VALID | loss: 0.1733 - global_acc: 0.9952 - class_acc: [1.0000 0.9986 0.9918 0.9905]
+Epoch 26/30
+TRAIN | loss: 0.3826 - global_acc: 0.8399 - class_acc: [1.0000 0.4867 0.9392 0.9325] 
+VALID | loss: 0.1654 - global_acc: 0.9968 - class_acc: [1.0000 0.9979 0.9946 0.9948]
+Epoch 27/30
+TRAIN | loss: 0.3834 - global_acc: 0.8406 - class_acc: [0.9998 0.4985 0.9335 0.9323] 
+VALID | loss: 0.1564 - global_acc: 0.9956 - class_acc: [1.0000 1.0000 0.9816 1.0000]
+Epoch 28/30
+TRAIN | loss: 0.3823 - global_acc: 0.8420 - class_acc: [1.0000 0.5021 0.9376 0.9316] 
+VALID | loss: 0.1474 - global_acc: 0.9952 - class_acc: [1.0000 1.0000 0.9818 0.9993]
+Epoch 29/30
+TRAIN | loss: 0.3790 - global_acc: 0.8420 - class_acc: [0.9998 0.5074 0.9381 0.9303] 
+VALID | loss: 0.1354 - global_acc: 0.9969 - class_acc: [1.0000 1.0000 0.9877 1.0000]
+Epoch 30/30
+TRAIN | loss: 0.3738 - global_acc: 0.8434 - class_acc: [1.0000 0.4934 0.9412 0.9393] 
+VALID | loss: 0.1373 - global_acc: 0.9983 - class_acc: [1.0000 1.0000 0.9929 1.0000]
+
+
+Evaluating...
+TEST | loss: 0.0656 - global_acc: 0.9840 - class_acc: [1.0000 0.9403 1.0000 0.9996]
+
+R 8
+
+Dataset preparation...
+Model preparation...
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv2d-1           [-1, 12, 13, 13]           1,776
+       BatchNorm2d-2           [-1, 12, 13, 13]              24
+              ReLU-3           [-1, 12, 13, 13]               0
+            Conv2d-4             [-1, 32, 9, 9]           9,632
+       BatchNorm2d-5             [-1, 32, 9, 9]              64
+              ReLU-6             [-1, 32, 9, 9]               0
+            Conv2d-7             [-1, 64, 7, 7]          18,496
+       BatchNorm2d-8             [-1, 64, 7, 7]             128
+              ReLU-9             [-1, 64, 7, 7]               0
+           Conv2d-10            [-1, 128, 2, 2]         204,928
+      BatchNorm2d-11            [-1, 128, 2, 2]             256
+             ReLU-12            [-1, 128, 2, 2]               0
+          Flatten-13                  [-1, 512]               0
+           Linear-14                  [-1, 256]         131,328
+             ReLU-15                  [-1, 256]               0
+           Linear-16                    [-1, 5]           1,285
+             ReLU-17                    [-1, 5]               0
+          Dropout-18                    [-1, 5]               0
+          Encoder-19                    [-1, 5]               0
+           Linear-20                  [-1, 256]           1,536
+             ReLU-21                  [-1, 256]               0
+          Dropout-22                  [-1, 256]               0
+           Linear-23                  [-1, 512]         131,584
+             ReLU-24                  [-1, 512]               0
+           Linear-25                  [-1, 256]         131,328
+             ReLU-26                  [-1, 256]               0
+           Linear-27                    [-1, 4]           1,028
+      OutputLayer-28                    [-1, 4]               0
+================================================================
+Total params: 633,393
+Trainable params: 633,393
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 0.01
+Forward/backward pass size (MB): 0.21
+Params size (MB): 2.42
+Estimated Total Size (MB): 2.64
+----------------------------------------------------------------
+Start training...
+Epoch 1/30
+TRAIN | loss: 0.9290 - global_acc: 0.5158 - class_acc: [0.7404 0.6634 0.1169 0.5547] 
+VALID | loss: 0.4344 - global_acc: 0.7423 - class_acc: [1.0000 1.0000 0.9858 0.0000] - BEST!
+Epoch 2/30
+TRAIN | loss: 0.6348 - global_acc: 0.6466 - class_acc: [0.7911 0.8000 0.4238 0.5689] 
+VALID | loss: 0.4352 - global_acc: 0.7348 - class_acc: [1.0000 1.0000 0.0000 0.9836]
+Epoch 3/30
+TRAIN | loss: 0.5843 - global_acc: 0.7147 - class_acc: [0.9087 0.8613 0.4635 0.6269] 
+VALID | loss: 0.3430 - global_acc: 0.9174 - class_acc: [1.0000 0.9861 0.7229 0.9615] - BEST!
+Epoch 4/30
+TRAIN | loss: 0.4601 - global_acc: 0.8136 - class_acc: [0.9374 0.8735 0.4732 0.9703] 
+VALID | loss: 0.2222 - global_acc: 0.9511 - class_acc: [1.0000 0.9953 0.8142 0.9900] - BEST!
+Epoch 5/30
+TRAIN | loss: 0.4543 - global_acc: 0.8214 - class_acc: [0.9280 0.8655 0.4950 0.9868] 
+VALID | loss: 0.2668 - global_acc: 0.8987 - class_acc: [1.0000 0.9986 0.5905 1.0000]
+Epoch 6/30
+TRAIN | loss: 0.4355 - global_acc: 0.8240 - class_acc: [0.9402 0.8667 0.4927 0.9899] 
+VALID | loss: 0.1670 - global_acc: 0.9828 - class_acc: [1.0000 0.9980 0.9406 0.9937] - BEST!
+Epoch 7/30
+TRAIN | loss: 0.4211 - global_acc: 0.8285 - class_acc: [0.9423 0.8770 0.4965 0.9941] 
+VALID | loss: 0.1610 - global_acc: 0.9859 - class_acc: [1.0000 1.0000 0.9481 0.9946] - BEST!
+Epoch 8/30
+TRAIN | loss: 0.4223 - global_acc: 0.8288 - class_acc: [0.9409 0.8739 0.5030 0.9959] 
+VALID | loss: 0.1616 - global_acc: 0.9871 - class_acc: [1.0000 1.0000 0.9464 0.9993] - BEST!
+Epoch 9/30
+TRAIN | loss: 0.4353 - global_acc: 0.8255 - class_acc: [0.9354 0.8709 0.4994 0.9941] 
+VALID | loss: 0.2020 - global_acc: 0.9670 - class_acc: [1.0000 1.0000 0.8696 1.0000]
+Epoch 10/30
+TRAIN | loss: 0.4242 - global_acc: 0.8254 - class_acc: [0.9382 0.8743 0.4924 0.9952] 
+VALID | loss: 0.1660 - global_acc: 0.9854 - class_acc: [1.0000 0.9986 0.9437 0.9993]
+Epoch 11/30
+TRAIN | loss: 0.4273 - global_acc: 0.8244 - class_acc: [0.9349 0.8741 0.4957 0.9975] 
+VALID | loss: 0.1721 - global_acc: 0.9850 - class_acc: [1.0000 1.0000 0.9382 1.0000]
+Epoch 12/30
+TRAIN | loss: 0.4228 - global_acc: 0.8258 - class_acc: [0.9412 0.8694 0.4928 0.9972] 
+VALID | loss: 0.1709 - global_acc: 0.9803 - class_acc: [1.0000 1.0000 0.9193 1.0000]
+Epoch 13/30
+TRAIN | loss: 0.3657 - global_acc: 0.8794 - class_acc: [0.9292 0.8772 0.7137 0.9960] 
+VALID | loss: 0.1057 - global_acc: 0.9886 - class_acc: [1.0000 0.9993 0.9604 0.9946] - BEST!
+Epoch 14/30
+TRAIN | loss: 0.3371 - global_acc: 0.8900 - class_acc: [0.9438 0.8758 0.7464 0.9947] 
+VALID | loss: 0.1448 - global_acc: 0.9721 - class_acc: [1.0000 0.9947 0.8882 1.0000]
+Epoch 15/30
+TRAIN | loss: 0.3456 - global_acc: 0.8852 - class_acc: [0.9358 0.8659 0.7440 0.9970] 
+VALID | loss: 0.0883 - global_acc: 0.9957 - class_acc: [1.0000 0.9987 0.9861 0.9979] - BEST!
+Epoch 16/30
+TRAIN | loss: 0.3346 - global_acc: 0.8887 - class_acc: [0.9362 0.8713 0.7527 0.9972] 
+VALID | loss: 0.1026 - global_acc: 0.9971 - class_acc: [1.0000 1.0000 0.9938 0.9945] - BEST!
+Epoch 17/30
+TRAIN | loss: 0.3305 - global_acc: 0.8908 - class_acc: [0.9370 0.8788 0.7478 0.9982] 
+VALID | loss: 0.1007 - global_acc: 0.9942 - class_acc: [1.0000 1.0000 0.9774 1.0000]
+Epoch 18/30
+TRAIN | loss: 0.3336 - global_acc: 0.8886 - class_acc: [0.9380 0.8815 0.7426 0.9975] 
+VALID | loss: 0.1005 - global_acc: 0.9906 - class_acc: [0.9993 0.9953 0.9709 0.9967]
+Epoch 19/30
+TRAIN | loss: 0.3402 - global_acc: 0.8872 - class_acc: [0.9358 0.8743 0.7403 0.9973] 
+VALID | loss: 0.1216 - global_acc: 0.9820 - class_acc: [1.0000 0.9798 0.9484 1.0000]
+Epoch 20/30
+TRAIN | loss: 0.3400 - global_acc: 0.8866 - class_acc: [0.9300 0.8766 0.7438 0.9975] 
+VALID | loss: 0.1099 - global_acc: 0.9915 - class_acc: [1.0000 1.0000 0.9715 0.9945]
+Epoch 21/30
+TRAIN | loss: 0.3259 - global_acc: 0.8935 - class_acc: [0.9404 0.8790 0.7516 0.9987] 
+VALID | loss: 0.1291 - global_acc: 0.9826 - class_acc: [0.9939 0.9739 0.9688 0.9938]
+Epoch 22/30
+TRAIN | loss: 0.3336 - global_acc: 0.8887 - class_acc: [0.9390 0.8767 0.7422 0.9982] 
+VALID | loss: 0.0908 - global_acc: 0.9980 - class_acc: [1.0000 0.9993 0.9929 1.0000] - BEST!
+Epoch 23/30
+TRAIN | loss: 0.3284 - global_acc: 0.8913 - class_acc: [0.9385 0.8790 0.7503 0.9977] 
+VALID | loss: 0.1019 - global_acc: 0.9925 - class_acc: [1.0000 0.9953 0.9761 0.9986]
+Epoch 24/30
+TRAIN | loss: 0.3367 - global_acc: 0.8875 - class_acc: [0.9383 0.8631 0.7482 0.9986] 
+VALID | loss: 0.0989 - global_acc: 0.9961 - class_acc: [1.0000 0.9993 0.9860 0.9986]
+Epoch 25/30
+TRAIN | loss: 0.3387 - global_acc: 0.8861 - class_acc: [0.9311 0.8698 0.7457 0.9995] 
+VALID | loss: 0.0982 - global_acc: 0.9968 - class_acc: [1.0000 0.9986 0.9886 1.0000]
+Epoch 26/30
+TRAIN | loss: 0.3340 - global_acc: 0.8885 - class_acc: [0.9345 0.8749 0.7448 0.9991] 
+VALID | loss: 0.0985 - global_acc: 0.9981 - class_acc: [1.0000 0.9987 0.9937 1.0000] - BEST!
+Epoch 27/30
+TRAIN | loss: 0.3303 - global_acc: 0.8892 - class_acc: [0.9427 0.8703 0.7472 0.9991] 
+VALID | loss: 0.0964 - global_acc: 0.9974 - class_acc: [1.0000 0.9993 0.9913 0.9993]
+Epoch 28/30
+TRAIN | loss: 0.3289 - global_acc: 0.8901 - class_acc: [0.9431 0.8675 0.7542 0.9979] 
+VALID | loss: 0.1065 - global_acc: 0.9968 - class_acc: [1.0000 0.9986 0.9892 0.9993]
+Epoch 29/30
+TRAIN | loss: 0.3328 - global_acc: 0.8892 - class_acc: [0.9323 0.8699 0.7541 0.9993] 
+VALID | loss: 0.1007 - global_acc: 0.9980 - class_acc: [1.0000 0.9979 0.9951 0.9986]
+Epoch 30/30
+TRAIN | loss: 0.3308 - global_acc: 0.8892 - class_acc: [0.9359 0.8788 0.7451 0.9984] 
+VALID | loss: 0.0931 - global_acc: 0.9971 - class_acc: [1.0000 1.0000 0.9884 1.0000]
+
+
+Evaluating...
+TEST | loss: 0.2246 - global_acc: 0.9864 - class_acc: [1.0000 0.9500 1.0000 0.9992]
+
+R 9
+
+Dataset preparation...
+Model preparation...
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv2d-1           [-1, 12, 13, 13]           1,776
+       BatchNorm2d-2           [-1, 12, 13, 13]              24
+              ReLU-3           [-1, 12, 13, 13]               0
+            Conv2d-4             [-1, 32, 9, 9]           9,632
+       BatchNorm2d-5             [-1, 32, 9, 9]              64
+              ReLU-6             [-1, 32, 9, 9]               0
+            Conv2d-7             [-1, 64, 7, 7]          18,496
+       BatchNorm2d-8             [-1, 64, 7, 7]             128
+              ReLU-9             [-1, 64, 7, 7]               0
+           Conv2d-10            [-1, 128, 2, 2]         204,928
+      BatchNorm2d-11            [-1, 128, 2, 2]             256
+             ReLU-12            [-1, 128, 2, 2]               0
+          Flatten-13                  [-1, 512]               0
+           Linear-14                  [-1, 256]         131,328
+             ReLU-15                  [-1, 256]               0
+           Linear-16                    [-1, 5]           1,285
+             ReLU-17                    [-1, 5]               0
+          Dropout-18                    [-1, 5]               0
+          Encoder-19                    [-1, 5]               0
+           Linear-20                  [-1, 256]           1,536
+             ReLU-21                  [-1, 256]               0
+          Dropout-22                  [-1, 256]               0
+           Linear-23                  [-1, 512]         131,584
+             ReLU-24                  [-1, 512]               0
+           Linear-25                  [-1, 256]         131,328
+             ReLU-26                  [-1, 256]               0
+           Linear-27                    [-1, 4]           1,028
+      OutputLayer-28                    [-1, 4]               0
+================================================================
+Total params: 633,393
+Trainable params: 633,393
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 0.01
+Forward/backward pass size (MB): 0.21
+Params size (MB): 2.42
+Estimated Total Size (MB): 2.64
+----------------------------------------------------------------
+Start training...
+Epoch 1/30
+TRAIN | loss: 0.9425 - global_acc: 0.5760 - class_acc: [0.8596 0.2641 0.5055 0.6628] 
+VALID | loss: 0.2959 - global_acc: 0.9671 - class_acc: [1.0000 0.9974 0.8912 0.9795] - BEST!
+Epoch 2/30
+TRAIN | loss: 0.4917 - global_acc: 0.8379 - class_acc: [0.8671 0.7706 0.7295 0.9834] 
+VALID | loss: 0.1338 - global_acc: 0.9877 - class_acc: [1.0000 1.0000 0.9594 0.9915] - BEST!
+Epoch 3/30
+TRAIN | loss: 0.4187 - global_acc: 0.8636 - class_acc: [0.8651 0.8679 0.7285 0.9909] 
+VALID | loss: 0.1386 - global_acc: 0.9840 - class_acc: [1.0000 0.9993 0.9394 0.9979]
+Epoch 4/30
+TRAIN | loss: 0.3960 - global_acc: 0.8652 - class_acc: [0.8661 0.8588 0.7478 0.9935] 
+VALID | loss: 0.1265 - global_acc: 0.9930 - class_acc: [1.0000 1.0000 0.9756 0.9954] - BEST!
+Epoch 5/30
+TRAIN | loss: 0.3646 - global_acc: 0.8739 - class_acc: [0.8721 0.8844 0.7448 0.9948] 
+VALID | loss: 0.1291 - global_acc: 0.9900 - class_acc: [1.0000 0.9993 0.9627 0.9980]
+Epoch 6/30
+TRAIN | loss: 0.3786 - global_acc: 0.8716 - class_acc: [0.8887 0.8623 0.7444 0.9949] 
+VALID | loss: 0.1214 - global_acc: 0.9905 - class_acc: [1.0000 1.0000 0.9643 0.9978]
+Epoch 7/30
+TRAIN | loss: 0.3526 - global_acc: 0.8856 - class_acc: [0.9242 0.8729 0.7523 0.9951] 
+VALID | loss: 0.1364 - global_acc: 0.9869 - class_acc: [1.0000 1.0000 0.9511 0.9979]
+Epoch 8/30
+TRAIN | loss: 0.3371 - global_acc: 0.8925 - class_acc: [0.9374 0.8743 0.7565 0.9980] 
+VALID | loss: 0.1238 - global_acc: 0.9857 - class_acc: [1.0000 1.0000 0.9433 0.9987]
+Epoch 9/30
+TRAIN | loss: 0.3465 - global_acc: 0.8866 - class_acc: [0.9330 0.8761 0.7332 0.9980] 
+VALID | loss: 0.1809 - global_acc: 0.9546 - class_acc: [1.0000 1.0000 0.8170 0.9973]
+Epoch 10/30
+TRAIN | loss: 0.3467 - global_acc: 0.8847 - class_acc: [0.9352 0.8701 0.7412 0.9975] 
+VALID | loss: 0.2336 - global_acc: 0.9341 - class_acc: [1.0000 1.0000 0.7323 0.9960]
+Epoch 11/30
+TRAIN | loss: 0.3469 - global_acc: 0.8864 - class_acc: [0.9336 0.8666 0.7490 0.9973] 
+VALID | loss: 0.2979 - global_acc: 0.9004 - class_acc: [1.0000 1.0000 0.6210 0.9727]
+Epoch 12/30
+TRAIN | loss: 0.3430 - global_acc: 0.8882 - class_acc: [0.9318 0.8730 0.7451 0.9984] 
+VALID | loss: 0.0961 - global_acc: 0.9940 - class_acc: [1.0000 1.0000 0.9764 0.9993] - BEST!
+Epoch 13/30
+TRAIN | loss: 0.3438 - global_acc: 0.8851 - class_acc: [0.9334 0.8725 0.7401 0.9982] 
+VALID | loss: 0.1174 - global_acc: 0.9830 - class_acc: [1.0000 1.0000 0.9312 0.9993]
+Epoch 14/30
+TRAIN | loss: 0.3367 - global_acc: 0.8898 - class_acc: [0.9342 0.8712 0.7544 0.9978] 
+VALID | loss: 0.1383 - global_acc: 0.9721 - class_acc: [1.0000 1.0000 0.8854 1.0000]
+Epoch 15/30
+TRAIN | loss: 0.3415 - global_acc: 0.8868 - class_acc: [0.9353 0.8751 0.7409 0.9980] 
+VALID | loss: 0.1150 - global_acc: 0.9859 - class_acc: [1.0000 1.0000 0.9430 1.0000]
+Epoch 16/30
+TRAIN | loss: 0.3375 - global_acc: 0.8888 - class_acc: [0.9375 0.8708 0.7469 0.9982] 
+VALID | loss: 0.1095 - global_acc: 0.9901 - class_acc: [1.0000 1.0000 0.9617 0.9993]
+Epoch 17/30
+TRAIN | loss: 0.3382 - global_acc: 0.8878 - class_acc: [0.9319 0.8724 0.7501 0.9984] 
+VALID | loss: 0.1104 - global_acc: 0.9911 - class_acc: [1.0000 1.0000 0.9661 0.9993]
+Epoch 18/30
+TRAIN | loss: 0.3392 - global_acc: 0.8891 - class_acc: [0.9318 0.8722 0.7434 0.9980] 
+VALID | loss: 0.1051 - global_acc: 0.9937 - class_acc: [1.0000 1.0000 0.9779 0.9973]
+Epoch 19/30
+TRAIN | loss: 0.3369 - global_acc: 0.8873 - class_acc: [0.9392 0.8768 0.7373 0.9989] 
+VALID | loss: 0.1086 - global_acc: 0.9934 - class_acc: [1.0000 1.0000 0.9728 1.0000]
+Epoch 20/30
+TRAIN | loss: 0.3421 - global_acc: 0.8864 - class_acc: [0.9292 0.8730 0.7492 0.9982] 
+VALID | loss: 0.1035 - global_acc: 0.9944 - class_acc: [1.0000 1.0000 0.9776 1.0000] - BEST!
+Epoch 21/30
+TRAIN | loss: 0.3414 - global_acc: 0.8868 - class_acc: [0.9385 0.8693 0.7438 0.9986] 
+VALID | loss: 0.1428 - global_acc: 0.9740 - class_acc: [1.0000 1.0000 0.8979 1.0000]
+Epoch 22/30
+TRAIN | loss: 0.3417 - global_acc: 0.8867 - class_acc: [0.9325 0.8713 0.7455 0.9982] 
+VALID | loss: 0.1025 - global_acc: 0.9896 - class_acc: [1.0000 1.0000 0.9573 1.0000]
+Epoch 23/30
+TRAIN | loss: 0.3341 - global_acc: 0.8879 - class_acc: [0.9440 0.8651 0.7451 0.9979] 
+VALID | loss: 0.1018 - global_acc: 0.9959 - class_acc: [1.0000 1.0000 0.9852 0.9985] - BEST!
+Epoch 24/30
+TRAIN | loss: 0.3299 - global_acc: 0.8893 - class_acc: [0.9375 0.8775 0.7448 0.9984] 
+VALID | loss: 0.1167 - global_acc: 0.9888 - class_acc: [1.0000 1.0000 0.9550 1.0000]
+Epoch 25/30
+TRAIN | loss: 0.3223 - global_acc: 0.8922 - class_acc: [0.9427 0.8854 0.7454 0.9993] 
+VALID | loss: 0.1046 - global_acc: 0.9929 - class_acc: [1.0000 1.0000 0.9716 0.9993]
+Epoch 26/30
+TRAIN | loss: 0.3448 - global_acc: 0.8866 - class_acc: [0.9322 0.8763 0.7391 0.9987] 
+VALID | loss: 0.1429 - global_acc: 0.9782 - class_acc: [0.9690 0.9965 0.9513 0.9966]
+Epoch 27/30
+TRAIN | loss: 0.3400 - global_acc: 0.8877 - class_acc: [0.9339 0.8719 0.7495 0.9982] 
+VALID | loss: 2.1718 - global_acc: 0.6087 - class_acc: [0.9801 1.0000 0.0902 0.3685]
+Epoch 28/30
+TRAIN | loss: 0.3344 - global_acc: 0.8889 - class_acc: [0.9390 0.8735 0.7443 0.9982] 
+VALID | loss: 0.1038 - global_acc: 0.9937 - class_acc: [1.0000 1.0000 0.9746 1.0000]
+Epoch 29/30
+TRAIN | loss: 0.3285 - global_acc: 0.8905 - class_acc: [0.9445 0.8676 0.7536 0.9980] 
+VALID | loss: 0.1151 - global_acc: 0.9854 - class_acc: [1.0000 1.0000 0.9416 1.0000]
+Epoch 30/30
+TRAIN | loss: 0.3376 - global_acc: 0.8883 - class_acc: [0.9329 0.8702 0.7493 0.9984] 
+VALID | loss: 0.0998 - global_acc: 0.9932 - class_acc: [1.0000 1.0000 0.9728 0.9993]
+
+
+Evaluating...
+TEST | loss: 0.1616 - global_acc: 0.9993 - class_acc: [1.0000 0.9994 0.9990 0.9996]
+
+R 10
+
+Dataset preparation...
+Model preparation...
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv2d-1           [-1, 12, 13, 13]           1,776
+       BatchNorm2d-2           [-1, 12, 13, 13]              24
+              ReLU-3           [-1, 12, 13, 13]               0
+            Conv2d-4             [-1, 32, 9, 9]           9,632
+       BatchNorm2d-5             [-1, 32, 9, 9]              64
+              ReLU-6             [-1, 32, 9, 9]               0
+            Conv2d-7             [-1, 64, 7, 7]          18,496
+       BatchNorm2d-8             [-1, 64, 7, 7]             128
+              ReLU-9             [-1, 64, 7, 7]               0
+           Conv2d-10            [-1, 128, 2, 2]         204,928
+      BatchNorm2d-11            [-1, 128, 2, 2]             256
+             ReLU-12            [-1, 128, 2, 2]               0
+          Flatten-13                  [-1, 512]               0
+           Linear-14                  [-1, 256]         131,328
+             ReLU-15                  [-1, 256]               0
+           Linear-16                    [-1, 5]           1,285
+             ReLU-17                    [-1, 5]               0
+          Dropout-18                    [-1, 5]               0
+          Encoder-19                    [-1, 5]               0
+           Linear-20                  [-1, 256]           1,536
+             ReLU-21                  [-1, 256]               0
+          Dropout-22                  [-1, 256]               0
+           Linear-23                  [-1, 512]         131,584
+             ReLU-24                  [-1, 512]               0
+           Linear-25                  [-1, 256]         131,328
+             ReLU-26                  [-1, 256]               0
+           Linear-27                    [-1, 4]           1,028
+      OutputLayer-28                    [-1, 4]               0
+================================================================
+Total params: 633,393
+Trainable params: 633,393
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 0.01
+Forward/backward pass size (MB): 0.21
+Params size (MB): 2.42
+Estimated Total Size (MB): 2.64
+----------------------------------------------------------------
+Start training...
+Epoch 1/30
+TRAIN | loss: 0.8814 - global_acc: 0.5886 - class_acc: [0.5265 0.5560 0.8814 0.3948] 
+VALID | loss: 0.3512 - global_acc: 0.9101 - class_acc: [0.9882 0.9993 0.6755 0.9719] - BEST!
+Epoch 2/30
+TRAIN | loss: 0.4369 - global_acc: 0.8387 - class_acc: [0.8233 0.8326 0.8872 0.8119] 
+VALID | loss: 0.3431 - global_acc: 0.8797 - class_acc: [0.9682 1.0000 0.5579 0.9920]
+Epoch 3/30
+TRAIN | loss: 0.3495 - global_acc: 0.8747 - class_acc: [0.9751 0.7579 0.9023 0.8627] 
+VALID | loss: 0.0857 - global_acc: 0.9721 - class_acc: [0.9980 1.0000 0.8908 1.0000] - BEST!
+Epoch 4/30
+TRAIN | loss: 0.3344 - global_acc: 0.8760 - class_acc: [0.9792 0.7526 0.9105 0.8614] 
+VALID | loss: 0.1195 - global_acc: 0.9554 - class_acc: [0.9813 1.0000 0.8404 0.9993]
+Epoch 5/30
+TRAIN | loss: 0.3047 - global_acc: 0.8824 - class_acc: [0.9781 0.7530 0.9261 0.8705] 
+VALID | loss: 0.0799 - global_acc: 0.9714 - class_acc: [0.9993 1.0000 0.8852 0.9993]
+Epoch 6/30
+TRAIN | loss: 0.2950 - global_acc: 0.8906 - class_acc: [0.9923 0.7650 0.9325 0.8684] 
+VALID | loss: 0.0174 - global_acc: 0.9963 - class_acc: [0.9993 1.0000 0.9883 0.9979] - BEST!
+Epoch 7/30
+TRAIN | loss: 0.2889 - global_acc: 0.8876 - class_acc: [0.9892 0.7593 0.9268 0.8753] 
+VALID | loss: 0.0576 - global_acc: 0.9826 - class_acc: [0.9986 1.0000 0.9323 1.0000]
+Epoch 8/30
+TRAIN | loss: 0.2797 - global_acc: 0.8931 - class_acc: [0.9942 0.7604 0.9358 0.8768] 
+VALID | loss: 0.0566 - global_acc: 0.9831 - class_acc: [0.9993 1.0000 0.9354 1.0000]
+Epoch 9/30
+TRAIN | loss: 0.2993 - global_acc: 0.8812 - class_acc: [0.9894 0.7381 0.9271 0.8704] 
+VALID | loss: 0.2643 - global_acc: 0.9197 - class_acc: [0.9929 1.0000 0.6876 1.0000]
+Epoch 10/30
+TRAIN | loss: 0.2884 - global_acc: 0.8850 - class_acc: [0.9907 0.7501 0.9306 0.8676] 
+VALID | loss: 0.0503 - global_acc: 0.9845 - class_acc: [0.9993 1.0000 0.9379 1.0000]
+Epoch 11/30
+TRAIN | loss: 0.2929 - global_acc: 0.8808 - class_acc: [0.9893 0.7431 0.9224 0.8744] 
+VALID | loss: 0.0380 - global_acc: 0.9877 - class_acc: [0.9779 1.0000 0.9727 1.0000]
+Epoch 12/30
+TRAIN | loss: 0.2848 - global_acc: 0.8874 - class_acc: [0.9957 0.7564 0.9349 0.8632] 
+VALID | loss: 0.0654 - global_acc: 0.9813 - class_acc: [0.9993 1.0000 0.9291 0.9993]
+Epoch 13/30
+TRAIN | loss: 0.2803 - global_acc: 0.8879 - class_acc: [0.9966 0.7443 0.9323 0.8797] 
+VALID | loss: 0.0547 - global_acc: 0.9820 - class_acc: [0.9866 1.0000 0.9433 1.0000]
+Epoch 14/30
+TRAIN | loss: 0.2803 - global_acc: 0.8887 - class_acc: [0.9982 0.7560 0.9331 0.8713] 
+VALID | loss: 0.0600 - global_acc: 0.9811 - class_acc: [0.9801 1.0000 0.9455 1.0000]
+Epoch 15/30
+TRAIN | loss: 0.2734 - global_acc: 0.8921 - class_acc: [0.9989 0.7548 0.9427 0.8713] 
+VALID | loss: 0.0220 - global_acc: 0.9922 - class_acc: [0.9987 1.0000 0.9699 1.0000]
+Epoch 16/30
+TRAIN | loss: 0.2794 - global_acc: 0.8881 - class_acc: [0.9987 0.7507 0.9328 0.8673] 
+VALID | loss: 0.0220 - global_acc: 0.9930 - class_acc: [0.9957 1.0000 0.9762 1.0000]
+Epoch 17/30
+TRAIN | loss: 0.2754 - global_acc: 0.8905 - class_acc: [0.9987 0.7478 0.9341 0.8807] 
+VALID | loss: 0.0244 - global_acc: 0.9935 - class_acc: [0.9953 1.0000 0.9789 1.0000]
+Epoch 18/30
+TRAIN | loss: 0.2865 - global_acc: 0.8840 - class_acc: [0.9982 0.7340 0.9298 0.8712] 
+VALID | loss: 0.0286 - global_acc: 0.9910 - class_acc: [0.9845 1.0000 0.9805 1.0000]
+Epoch 19/30
+TRAIN | loss: 0.2811 - global_acc: 0.8851 - class_acc: [0.9979 0.7462 0.9267 0.8734] 
+VALID | loss: 0.1072 - global_acc: 0.9702 - class_acc: [0.9987 1.0000 0.8826 1.0000]
+Epoch 20/30
+TRAIN | loss: 0.2895 - global_acc: 0.8870 - class_acc: [0.9974 0.7499 0.9283 0.8688] 
+VALID | loss: 0.0601 - global_acc: 0.9828 - class_acc: [0.9993 1.0000 0.9340 1.0000]
+Epoch 21/30
+TRAIN | loss: 0.2859 - global_acc: 0.8852 - class_acc: [0.9991 0.7407 0.9322 0.8685] 
+VALID | loss: 0.0288 - global_acc: 0.9915 - class_acc: [0.9973 1.0000 0.9688 1.0000]
+Epoch 22/30
+TRAIN | loss: 0.2734 - global_acc: 0.8908 - class_acc: [1.0000 0.7545 0.9329 0.8756] 
+VALID | loss: 0.0249 - global_acc: 0.9918 - class_acc: [0.9945 1.0000 0.9739 1.0000]
+Epoch 23/30
+TRAIN | loss: 0.2802 - global_acc: 0.8867 - class_acc: [0.9993 0.7380 0.9316 0.8749] 
+VALID | loss: 0.0134 - global_acc: 0.9963 - class_acc: [0.9973 1.0000 0.9880 1.0000]
+Epoch 24/30
+TRAIN | loss: 0.2694 - global_acc: 0.8899 - class_acc: [0.9998 0.7491 0.9392 0.8688] 
+VALID | loss: 0.0167 - global_acc: 0.9957 - class_acc: [1.0000 1.0000 0.9828 1.0000]
+Epoch 25/30
+TRAIN | loss: 0.2750 - global_acc: 0.8881 - class_acc: [0.9995 0.7454 0.9380 0.8708] 
+VALID | loss: 0.0199 - global_acc: 0.9939 - class_acc: [0.9961 1.0000 0.9796 1.0000]
+Epoch 26/30
+TRAIN | loss: 0.2696 - global_acc: 0.8925 - class_acc: [0.9998 0.7587 0.9328 0.8784] 
+VALID | loss: 0.0211 - global_acc: 0.9944 - class_acc: [0.9960 1.0000 0.9838 0.9978]
+Epoch 27/30
+TRAIN | loss: 0.2759 - global_acc: 0.8890 - class_acc: [0.9998 0.7447 0.9339 0.8748] 
+VALID | loss: 0.0422 - global_acc: 0.9886 - class_acc: [0.9870 1.0000 0.9671 1.0000]
+Epoch 28/30
+TRAIN | loss: 0.2794 - global_acc: 0.8917 - class_acc: [0.9993 0.7508 0.9265 0.8816] 
+VALID | loss: 0.0173 - global_acc: 0.9949 - class_acc: [0.9993 1.0000 0.9804 1.0000]
+Epoch 29/30
+TRAIN | loss: 0.2836 - global_acc: 0.8866 - class_acc: [0.9995 0.7462 0.9349 0.8656] 
+VALID | loss: 0.0276 - global_acc: 0.9915 - class_acc: [0.9986 1.0000 0.9671 1.0000]
+Epoch 30/30
+TRAIN | loss: 0.2740 - global_acc: 0.8924 - class_acc: [0.9998 0.7485 0.9412 0.8776] 
+VALID | loss: 0.0234 - global_acc: 0.9925 - class_acc: [0.9993 1.0000 0.9704 1.0000]
+
+
+Evaluating...
+TEST | loss: 0.0111 - global_acc: 0.9993 - class_acc: [1.0000 1.0000 0.9990 0.9992]
+
+
