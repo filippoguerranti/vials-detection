@@ -18,7 +18,7 @@ Implemention of an end-to-end model for the classification pharmaceutical vials 
 
 ## Info
 
-*Author*: Filippo Guerranti ([email](mailto:filippo.guerranti@student.unisi.it))  
-*Professor*: Alessandro Mecocci ([email](mailto:mecocci@unisi.it))  
-*Exam*: Advanced Digital Image Processing  
-*In collaboration with*: Pharma Integration ([website](http://www.pharma-integration.it))
+**Author**: Filippo Guerranti ([email](mailto:filippo.guerranti@student.unisi.it))  
+
+This project is part of the *Advanced Digital Image Processing* exam for the M.Sc. course in Computer and Automation Engineering at University of Siena (Italy). The dataset has been provided by *Pharma Integration* ([website](http://www.pharma-integration.it)).
+For further information, please contact the author.
