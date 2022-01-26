@@ -1,0 +1,10 @@
+{
+    "python.formatting.provider": "black",
+    // "python.formatting.blackPath": "/opt/homebrew/Caskroom/miniforge/base/envs/tfopencv/bin/black", // jarvis
+    // "python.formatting.blackPath": "/opt/homebrew/Caskroom/miniforge/base/envs/tfopencv/bin/black", // kronos
+    "editor.formatOnSave": true,
+    "editor.rulers": [
+        90,
+        120
+    ]
+}
