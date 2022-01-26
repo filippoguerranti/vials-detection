@@ -2,15 +2,19 @@
 
 ## Goal
 
-Implemention of an end-to-end model for the recognition and detection of unsealed pharmaceutical vials during different processing steps (*modules*).
+Implemention of an end-to-end model for the classification pharmaceutical vials during different reconciliation steps of a production chain.
 
 ## Project workflow
 
-1. Image dataset analysis (unsupervised)
-2. Vial ROI identification (for each different module)
-3. Supervision (by hand)
-4. Feature extraction from CNN latent representation
-5. Training and evaluation using classical ML algorithms (SVM, Random Forest, ...)
+1. Creation of an ad-hoc dataset, called **VIALS** dataset
+2. Implementation of a Supervised Convolutional Autoencoder (SAE)
+    * `SAE32`: handles 32x32 images
+    * `SAE90`: handles 90x90 images 
+3. Implementation of a baseline Convolutional Neural Network (CNN)
+    * `CNN32`: handles 32x32 images
+    * `CNN90`: handles 90x90 images 
+4. Data augmentation and batch balance to handle class imbalance and similarity among elements of same class
+5. Comparison of the models
 
 ## Info
 
