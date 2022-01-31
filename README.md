@@ -2,7 +2,7 @@
 
 ## Goal
 
-Implemention of an end-to-end model for the classification pharmaceutical vials during different reconciliation steps of a production chain.
+Implemention of an end-to-end model for the classification of pharmaceutical vials during different reconciliation steps of a production chain.
 
 ## Project workflow
 
