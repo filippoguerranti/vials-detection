@@ -20,5 +20,5 @@ Implemention of an end-to-end model for the classification of pharmaceutical via
 
 **Author**: Filippo Guerranti ([email](mailto:filippo.guerranti@student.unisi.it))  
 
-This project is part of the *Advanced Digital Image Processing* exam for the M.Sc. course in Computer and Automation Engineering at University of Siena (Italy). The dataset has been provided by *Pharma Integration* ([website](http://www.pharma-integration.it)).
+This project is part of the *Advanced Digital Image Processing* exam for the M.Sc. course in Computer and Automation Engineering at University of Siena (Italy). 
 For further information, please contact the author.
